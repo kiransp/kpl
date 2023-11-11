@@ -12,7 +12,6 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { kplLogo } from "../Images";
 
@@ -34,10 +33,20 @@ function Header(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
+        {navItems.map((item, index) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <Link
+                to={index === 0 ? "/" : item}
+                key={item}
+                style={{
+                  textDecoration: "none",
+                  marginRight: "25px",
+                  fontSize: "20px",
+                }}
+              >
+                <ListItemText primary={item} />
+              </Link>
             </ListItemButton>
           </ListItem>
         ))}
@@ -59,14 +68,6 @@ function Header(props) {
             alt="logo"
             style={{ margin: "6px 0" }}
           />
-          {/* <Typography
-            variant="h6"
-            component="div"
-            // sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-            sx={{ flexGrow: 1 }}
-          >
-            KPL
-          </Typography> */}
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item, index) => (
