@@ -1,0 +1,50 @@
+.nav-logo {
+  margin: 6px 0;
+  width: 7%;
+}
+.nav-bar {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+%nav-link {
+  text-decoration: none;
+  margin-right: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav-link-mobile {
+  @extend %nav-link;
+  color: #000;
+}
+
+.nav-link-desktop {
+  @extend %nav-link;
+  color: #fff;
+}
+
+.dislodged-border {
+  background: yellow;
+  color: #000;
+  display: inline-block;
+  font-family: sans-serif;
+  padding: 15px 20px 14px;
+  position: relative;
+  text-decoration: none;
+}
+
+.dislodged-border,
+.dislodged-border:before {
+  box-sizing: border-box;
+}
+
+.dislodged-border:before {
+  border: 2px solid #fff;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 7px;
+  left: 7px;
+  z-index: -1;
+}

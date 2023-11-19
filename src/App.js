@@ -1,15 +1,15 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Header from "./globalComponents/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Tournaments from "./pages/Tournaments";
 
 const theme = createTheme({
   // Override or create new styles, colors, palettes...
   palette: {
-    primary: {
-      main: "#19398a",
-    },
+    // primary: {
+    //   // main: "#19398a",
+    // },
     icons: {
       main: "#FFF",
     },

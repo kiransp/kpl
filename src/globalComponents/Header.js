@@ -13,10 +13,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
-import { kplLogo } from "../Images";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import styles from "./Header.module.scss";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About Us", "Tournaments", "Gallery", "Contact Us"];
+const navItems = ["About", "Tournaments", "Gallery", "Contact Us"];
 
 function Header(props) {
   const { window } = props;
@@ -26,6 +27,7 @@ function Header(props) {
     setMobileOpen((prevState) => !prevState);
   };
 
+  // Mobile menu
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -39,11 +41,7 @@ function Header(props) {
               <Link
                 to={index === 0 ? "/" : item}
                 key={item}
-                style={{
-                  textDecoration: "none",
-                  marginRight: "25px",
-                  fontSize: "20px",
-                }}
+                className={styles["nav-link-mobile"]}
               >
                 <ListItemText primary={item} />
               </Link>
@@ -60,29 +58,34 @@ function Header(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ position: "inherit" }}>
-        <Toolbar sx={{ justifyContent: "space-between" }}>
-          <img
-            src={kplLogo}
-            width="7%"
-            alt="logo"
-            style={{ margin: "6px 0" }}
-          />
-
+      <AppBar
+        component="nav"
+        className={styles["nav-bar"]}
+        sx={{ position: "absolute" }}
+      >
+        <Toolbar sx={{ justifyContent: "end", mt: "3%", mr: "6%" }}>
+          {/* Desktop menu */}
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item, index) => (
-              <Link
-                to={index === 0 ? "/" : item}
-                key={item}
-                style={{
-                  color: "#fff",
-                  textDecoration: "none",
-                  marginRight: "25px",
-                  fontSize: "20px",
-                }}
-              >
-                {item}
-              </Link>
+              <>
+                <Link
+                  to={index === 0 ? "/" : item}
+                  key={item}
+                  className={
+                    index === navItems.length - 1
+                      ? styles["dislodged-border"]
+                      : styles["nav-link-desktop"]
+                  }
+                >
+                  {index === navItems.length - 1 ? (
+                    <span style={{ display: "flex" }}>
+                      {item} <ArrowRightAltIcon />
+                    </span>
+                  ) : (
+                    <>{item}</>
+                  )}
+                </Link>
+              </>
             ))}
           </Box>
           <IconButton
