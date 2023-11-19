@@ -1,8 +1,8 @@
 import { Grid, useMediaQuery, useTheme } from "@mui/material";
-import styles from "./Home.module.scss";
+import styles from "./HeroBanner.module.scss";
 import { bannerImage, bannerImageMobile, kplLogo } from "../../Images";
 
-const Home = () => {
+const HeroBanner = () => {
   const theme = useTheme();
   const mobile = useMediaQuery(theme.breakpoints.down("sm"));
   console.log("Mobile ", mobile);
@@ -38,4 +38,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HeroBanner;
