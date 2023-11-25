@@ -10,18 +10,26 @@ const HomeGallery = () => {
       className={styles["home-gallery-container"]}
       sx={{ p: { xs: "10%", sm: "5%" } }}
     >
-      <Grid item md={12}>
-        <Typography variant="h5" className={styles["hg-title"]}>
-          GALLERY
+      <Grid item md={12} xs={12}>
+        <Typography
+          variant="h3"
+          className={styles["hg-title"]}
+          sx={{ p: "0 0 20px 0" }}
+        >
+          Gallery
         </Typography>
+      </Grid>
+      <Grid item md={12} xs={12}>
         <Typography variant="h1" className={styles["hg-heading"]}>
-          Recent Lates Match Photographs
+          Recent Latest Match Photos
         </Typography>
       </Grid>
       {hgPlaceholderCnt.map((image, index) => (
-        <Grid item md={6} xs={12} className={styles["hg-images"]}>
-          <img src={hg_placeholder} alt="placeholder" />
-        </Grid>
+        <>
+          <Grid item md={6} xs={12} className={styles["hg-images"]}>
+            <img src={hg_placeholder} alt="placeholder" width="100%" />
+          </Grid>
+        </>
       ))}
     </Grid>
   );

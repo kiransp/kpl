@@ -19,7 +19,7 @@ const About = () => {
         />
       </Grid>
       <Grid item md={6} xs={12} sx={{ pl: { xs: 0, sm: "30px" } }}>
-        <Typography variant="h5" sx={{ p: "20px 0" }}>
+        <Typography variant="h3" sx={{ p: "0 0 20px 0" }}>
           About
         </Typography>
         <Typography variant="h1" className={styles["about-title"]}>
