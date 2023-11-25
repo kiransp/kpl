@@ -11,3 +11,5 @@ export const abtBannerMobile =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_mobile.png?alt=media&token=2a643aec-fc10-4700-ab2f-e389d630d4e6";
 export const hg_placeholder =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/gallery_po.png?alt=media&token=1ee1b9d8-059d-4f6c-8cee-f1a8d5e7f792";
+export const video_thumbnail =
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/video_thumbnail.png?alt=media&token=f9e0df50-88a0-4a33-901f-f824f0f28749";
