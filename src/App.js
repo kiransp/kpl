@@ -19,13 +19,31 @@ const theme = createTheme({
   },
   typography: {
     h1: {
-      fontSize: "4rem",
+      fontSize: "64px",
+      lineHeight: "64px",
+      "@media (max-width:600px)": {
+        // for mobile screens
+        fontSize: "36px",
+        lineHeight: "36px",
+      },
+    },
+    h3: {
+      fontSize: "40px",
+      lineHeight: "64px",
+      "@media (max-width:600px)": {
+        // for mobile screens
+        fontSize: "36px",
+        lineHeight: "36px",
+      },
     },
   },
 });
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      {/* <div>
+        <h1>Hello </h1>
+      </div> */}
       <BrowserRouter>
         <header>
           <Header />
