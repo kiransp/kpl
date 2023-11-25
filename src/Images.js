@@ -8,3 +8,5 @@ export const abtBannerDesktop =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_desktop.png?alt=media&token=e73df3fd-1896-4819-adfe-6848b3ba6449";
 export const abtBannerMobile =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_mobile.png?alt=media&token=2a643aec-fc10-4700-ab2f-e389d630d4e6";
+export const hg_placeholder =
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/gallery_po.png?alt=media&token=1ee1b9d8-059d-4f6c-8cee-f1a8d5e7f792";
