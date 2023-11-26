@@ -5,7 +5,9 @@ import { bannerImage, bannerImageMobile, kplLogo } from "../../Images";
 const HeroBanner = () => {
   const theme = useTheme();
   const mobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const bigScreen = useMediaQuery(theme.breakpoints.up("xl"));
   console.log("Mobile ", mobile);
+  console.log("bigScreen ", bigScreen);
   return (
     <Grid
       container
@@ -15,6 +17,8 @@ const HeroBanner = () => {
           xs: `url(${bannerImageMobile})`,
           sm: `url(${bannerImage})`,
         },
+        height: bigScreen ? "1024px" : "800px",
+        backgroundSize: bigScreen ? "cover" : "contain",
       }}
     >
       {mobile ? (
