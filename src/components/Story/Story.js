@@ -15,7 +15,8 @@ const Story = () => {
         <img
           src={mobile ? video_thumbnail : video_thumbnail}
           alt="story banner"
-          width={"90%"}
+          //   width={"90%"}
+          style={{ width: mobile ? "100%" : "90%" }}
         />
       </Grid>
       <Grid item md={6} xs={12} sx={{ pl: { xs: 0, sm: "30px" } }}>

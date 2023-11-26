@@ -1,8 +1,9 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import Header from "./globalComponents/Header";
+import Header from "./globalComponents/Header/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Tournaments from "./pages/Tournaments";
+import Footer from "./globalComponents/Footer/Footer";
 
 const theme = createTheme({
   // Override or create new styles, colors, palettes...
@@ -53,7 +54,7 @@ function App() {
           <Route path="/tournaments" element={<Tournaments />} />
         </Routes>
         <footer>
-          <h1>Footer comes here</h1>
+          <Footer />
         </footer>
       </BrowserRouter>
     </ThemeProvider>
