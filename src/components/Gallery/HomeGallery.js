@@ -9,6 +9,7 @@ const HomeGallery = () => {
       container
       className={styles["home-gallery-container"]}
       sx={{ p: { xs: "10%", sm: "5%" } }}
+      id="Gallery"
     >
       <Grid item md={12} xs={12}>
         <Typography

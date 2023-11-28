@@ -12,12 +12,12 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Link } from "react-router-dom";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import styles from "./Header.module.scss";
+import { NavHashLink } from "react-router-hash-link";
 
 const drawerWidth = 240;
-const navItems = ["About", "Tournaments", "Gallery", "Contact Us"];
+const navItems = ["About", "Gallery", "Contact Us"];
 
 function Header(props) {
   const { window } = props;
@@ -38,13 +38,14 @@ function Header(props) {
         {navItems.map((item, index) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <Link
-                to={index === 0 ? "/" : item}
+              <NavHashLink
+                smooth
+                to={`/#${item}`}
                 key={item}
                 className={styles["nav-link-mobile"]}
               >
                 <ListItemText primary={item} />
-              </Link>
+              </NavHashLink>
             </ListItemButton>
           </ListItem>
         ))}
@@ -68,8 +69,9 @@ function Header(props) {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item, index) => (
               <>
-                <Link
-                  to={index === 0 ? "/" : item}
+                <NavHashLink
+                  smooth
+                  to={`/#${item}`}
                   key={item}
                   className={
                     index === navItems.length - 1
@@ -84,7 +86,7 @@ function Header(props) {
                   ) : (
                     <>{item}</>
                   )}
-                </Link>
+                </NavHashLink>
               </>
             ))}
           </Box>

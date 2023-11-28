@@ -2,7 +2,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Header from "./globalComponents/Header/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Tournaments from "./pages/Tournaments";
+// import Tournaments from "./pages/Tournaments";
 import Footer from "./globalComponents/Footer/Footer";
 
 const theme = createTheme({
@@ -51,7 +51,7 @@ function App() {
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/tournaments" element={<Tournaments />} />
+          {/* <Route path="/tournaments" element={<Tournaments />} /> */}
         </Routes>
         <footer>
           <Footer />

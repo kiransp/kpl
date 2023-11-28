@@ -10,6 +10,7 @@ const About = () => {
       container
       className={styles["about-container"]}
       sx={{ p: { xs: "10%", sm: "5%" } }}
+      id="About"
     >
       <Grid item md={6} xs={12}>
         <img

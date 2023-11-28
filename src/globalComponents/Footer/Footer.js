@@ -38,7 +38,7 @@ const Footer = () => {
             </Typography>
           </div> */}
         </div>
-        <Grid item md={6} xs={12}>
+        <Grid item md={6} xs={12} id="Contact Us">
           <Typography variant="h6">Follow us</Typography>
           <div>
             <img src={fb_icon} alt="a" className={styles["social-icons"]} />
