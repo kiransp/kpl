@@ -1,17 +1,14 @@
-import { Button, Grid, Typography } from "@mui/material";
-import styles from "./HomeGallery.module.scss";
-import { hg_placeholder } from "../../Images";
-import { useNavigate } from "react-router-dom";
+import { Grid, Typography } from "@mui/material";
+import { hg_placeholder } from "../Images";
+import styles from "../components/Gallery/HomeGallery.module.scss";
 
-const HomeGallery = () => {
-  const navigate = useNavigate();
+const Gallery = () => {
   const hgPlaceholderCnt = [4, 4, 5, 6];
   return (
     <Grid
       container
       className={styles["home-gallery-container"]}
-      sx={{ p: { xs: "10%", sm: "5%" } }}
-      id="Gallery"
+      //   sx={{ p: { xs: "10%", sm: "5%" } }}
     >
       <Grid item md={12} xs={12}>
         <Typography
@@ -34,20 +31,8 @@ const HomeGallery = () => {
           </Grid>
         </>
       ))}
-      <Grid xs={12} sx={{ display: "flex", justifyContent: "center" }}>
-        <Button
-          variant="contained"
-          sx={{
-            backgroundColor: "#000",
-            border: "1px solid #FFF",
-          }}
-          onClick={() => navigate("/Gallery")}
-        >
-          View All
-        </Button>
-      </Grid>
     </Grid>
   );
 };
 
-export default HomeGallery;
+export default Gallery;

@@ -12,12 +12,12 @@ import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { Link } from "react-router-dom";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import styles from "./Header.module.scss";
+import { NavHashLink } from "react-router-hash-link";
 
 const drawerWidth = 240;
-const navItems = ["About", "Tournaments", "Gallery", "Contact Us"];
+const navItems = ["About", "Gallery", "Contact Us"];
 
 function Header(props) {
   const { window } = props;
@@ -29,22 +29,26 @@ function Header(props) {
 
   // Mobile menu
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", color: "#FFF" }}
+    >
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        KPL
       </Typography>
       <Divider />
       <List>
         {navItems.map((item, index) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <Link
-                to={index === 0 ? "/" : item}
+            <ListItemButton sx={{ textAlign: "left" }}>
+              <NavHashLink
+                smooth
+                to={`/#${item}`}
                 key={item}
                 className={styles["nav-link-mobile"]}
               >
-                <ListItemText primary={item} />
-              </Link>
+                <ListItemText primary={item} sx={{ color: "#FFF" }} />
+              </NavHashLink>
             </ListItemButton>
           </ListItem>
         ))}
@@ -63,13 +67,16 @@ function Header(props) {
         className={styles["nav-bar"]}
         sx={{ position: "absolute" }}
       >
-        <Toolbar sx={{ justifyContent: "end", mt: "3%", mr: "6%" }}>
+        <Toolbar
+          sx={{ justifyContent: "end", mt: "3%", mr: { xs: "0", sm: "6%" } }}
+        >
           {/* Desktop menu */}
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item, index) => (
               <>
-                <Link
-                  to={index === 0 ? "/" : item}
+                <NavHashLink
+                  smooth
+                  to={`/#${item}`}
                   key={item}
                   className={
                     index === navItems.length - 1
@@ -84,7 +91,7 @@ function Header(props) {
                   ) : (
                     <>{item}</>
                   )}
-                </Link>
+                </NavHashLink>
               </>
             ))}
           </Box>
@@ -102,7 +109,7 @@ function Header(props) {
               },
             }}
           >
-            <MenuIcon />
+            <MenuIcon fontSize="large" />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -121,6 +128,7 @@ function Header(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: "#000",
             },
           }}
         >
