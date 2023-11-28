@@ -29,22 +29,25 @@ function Header(props) {
 
   // Mobile menu
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{ textAlign: "center", color: "#FFF" }}
+    >
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        KPL
       </Typography>
       <Divider />
       <List>
         {navItems.map((item, index) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton sx={{ textAlign: "left" }}>
               <NavHashLink
                 smooth
                 to={`/#${item}`}
                 key={item}
                 className={styles["nav-link-mobile"]}
               >
-                <ListItemText primary={item} />
+                <ListItemText primary={item} sx={{ color: "#FFF" }} />
               </NavHashLink>
             </ListItemButton>
           </ListItem>
@@ -64,7 +67,9 @@ function Header(props) {
         className={styles["nav-bar"]}
         sx={{ position: "absolute" }}
       >
-        <Toolbar sx={{ justifyContent: "end", mt: "3%", mr: "6%" }}>
+        <Toolbar
+          sx={{ justifyContent: "end", mt: "3%", mr: { xs: "0", sm: "6%" } }}
+        >
           {/* Desktop menu */}
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item, index) => (
@@ -104,7 +109,7 @@ function Header(props) {
               },
             }}
           >
-            <MenuIcon />
+            <MenuIcon fontSize="large" />
           </IconButton>
         </Toolbar>
       </AppBar>
@@ -123,6 +128,7 @@ function Header(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+              backgroundColor: "#000",
             },
           }}
         >

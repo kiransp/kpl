@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 // import Tournaments from "./pages/Tournaments";
 import Footer from "./globalComponents/Footer/Footer";
+import Gallery from "./pages/Gallery";
+import HeroBanner from "./components/HeroBanner/HeroBanner";
 
 const theme = createTheme({
   // Override or create new styles, colors, palettes...
@@ -52,6 +54,15 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="/tournaments" element={<Tournaments />} /> */}
+          <Route
+            path="/Gallery"
+            element={
+              <>
+                <HeroBanner />
+                <Gallery />
+              </>
+            }
+          />
         </Routes>
         <footer>
           <Footer />
