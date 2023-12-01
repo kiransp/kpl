@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
 import styles from "./Footer.module.scss";
 import {
   call_icon,
@@ -7,16 +7,20 @@ import {
   twitter_icon,
   yt_icon,
 } from "../../Images";
+import { useTheme } from "@emotion/react";
 
 const Footer = () => {
+  const theme = useTheme();
+  const mobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <>
       <Grid container sx={{ p: { xs: "0 10% 10% 10%", sm: "0 5% 2% 5%" } }}>
         <div style={{ position: "relative", width: "100%" }}>
           <img
             src={
-              // "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/desktop_footer.png?alt=media&token=52f9ed42-ebce-4575-9c8f-eb5be3dbe209"
-              "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/desktop_footer_txt.png?alt=media&token=1eb8caf4-6a9e-4eb1-a1fb-afadcfd5c0e3"
+              mobile
+                ? "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/footer_mobile.png?alt=media&token=f043a78b-9657-4e49-b621-f54f832b50b6"
+                : "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/desktop_footer_txt.png?alt=media&token=1eb8caf4-6a9e-4eb1-a1fb-afadcfd5c0e3"
             }
             alt="de"
             width="100%"
