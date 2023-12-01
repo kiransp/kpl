@@ -33,9 +33,6 @@ function Header(props) {
       onClick={handleDrawerToggle}
       sx={{ textAlign: "center", color: "#FFF" }}
     >
-      <Typography variant="h6" sx={{ my: 2 }}>
-        KPL
-      </Typography>
       <Divider />
       <List>
         {navItems.map((item, index) => (
@@ -47,7 +44,10 @@ function Header(props) {
                 key={item}
                 className={styles["nav-link-mobile"]}
               >
-                <ListItemText primary={item} sx={{ color: "#FFF" }} />
+                <ListItemText
+                  primary={item}
+                  sx={{ color: "#FFF", fontSize: "50px !important" }}
+                />
               </NavHashLink>
             </ListItemButton>
           </ListItem>
@@ -85,8 +85,8 @@ function Header(props) {
                   }
                 >
                   {index === navItems.length - 1 ? (
-                    <span style={{ display: "flex" }}>
-                      {item} <ArrowRightAltIcon />
+                    <span style={{ display: "flex", alignItems: "center" }}>
+                      {item} <ArrowRightAltIcon fontSize="large" />
                     </span>
                   ) : (
                     <>{item}</>

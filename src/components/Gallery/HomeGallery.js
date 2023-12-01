@@ -1,6 +1,6 @@
 import { Button, Grid, Typography } from "@mui/material";
 import styles from "./HomeGallery.module.scss";
-import { hg_placeholder } from "../../Images";
+// import { hg_placeholder } from "../../Images";
 import { useNavigate } from "react-router-dom";
 
 const HomeGallery = () => {
@@ -17,20 +17,36 @@ const HomeGallery = () => {
         <Typography
           variant="h3"
           className={styles["hg-title"]}
-          sx={{ p: "0 0 20px 0" }}
+          sx={{ fontFamily: "Montserrat", fontWeight: "600" }}
         >
           Gallery
         </Typography>
       </Grid>
       <Grid item md={12} xs={12}>
-        <Typography variant="h1" className={styles["hg-heading"]}>
-          Recent Latest Match Photos
+        <Typography
+          variant="h1"
+          className={styles["hg-heading"]}
+          sx={{ my: { xs: "30px", sm: "0" } }}
+        >
+          Recent Match Photos
         </Typography>
       </Grid>
       {hgPlaceholderCnt.map((image, index) => (
         <>
-          <Grid item md={6} xs={12} className={styles["hg-images"]}>
-            <img src={hg_placeholder} alt="placeholder" width="100%" />
+          <Grid
+            item
+            md={6}
+            xs={12}
+            className={styles["hg-images"]}
+            sx={{ p: { xs: "0 0 20px 0", sm: "20px" } }}
+          >
+            <img
+              src={
+                "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/old_kpl.jpeg?alt=media&token=cbc08a01-5b14-4d97-82f2-60a5dabf8a0f"
+              }
+              alt="placeholder"
+              width="100%"
+            />
           </Grid>
         </>
       ))}
@@ -42,6 +58,12 @@ const HomeGallery = () => {
             backgroundColor: "#000",
             border: "1px solid #FFF",
             fontFamily: "Montserrat",
+            fontSize: "20px",
+            fontWeight: "800",
+            borderRadius: "0",
+            padding: "15px 20px 14px",
+            textTransform: "none",
+            marginTop: "30px",
             "&:hover": {
               backgroundColor: "#FFFF00",
               color: "#000",

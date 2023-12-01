@@ -8,9 +8,9 @@ export const bannerImageMobile =
 // "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/hero_banner_mobile.png?alt=media&token=9c6e33ee-3bca-4450-a14a-ef186fc86b42";
 // "https://gfc.target.com/elevatewebsiteproduction/elevate_2023/hero_banner_mobile.png";
 export const abtBannerDesktop =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_desktop.png?alt=media&token=e73df3fd-1896-4819-adfe-6848b3ba6449";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_dt.png?alt=media&token=b35c3312-19f0-4dbc-a4ca-440b8bba3710";
 export const abtBannerMobile =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_mobile.png?alt=media&token=2a643aec-fc10-4700-ab2f-e389d630d4e6";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_sp.png?alt=media&token=150edc38-f5cb-47f8-b06a-00f43d4c60a0";
 export const hg_placeholder =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/gallery_po.png?alt=media&token=1ee1b9d8-059d-4f6c-8cee-f1a8d5e7f792";
 export const video_thumbnail =

@@ -22,7 +22,7 @@ const About = () => {
       <Grid item md={6} xs={12} sx={{ pl: { xs: 0, sm: "30px" } }}>
         <Typography
           variant="h3"
-          sx={{ p: "0 0 20px 0", fontFamily: "Montserrat" }}
+          sx={{ fontFamily: "Montserrat", fontWeight: "600" }}
         >
           About
         </Typography>

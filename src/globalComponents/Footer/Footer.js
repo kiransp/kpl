@@ -19,25 +19,11 @@ const Footer = () => {
             alt="de"
             width="100%"
           />
-          {/* <div
-            style={{
-              position: "absolute",
-              bottom: "27%",
-              marginLeft: "2%",
-              color: "#FFF",
-            }}
-          >
-            <Typography variant="h1" sx={{ fontWeight: "bold" }}>
-              BANNI. AADI. GELLI.
-            </Typography>
-            <Typography variant="h6" sx={{ width: "70%" }}>
-              A digital agency is a business you hire to outsource your digital
-              marketing efforts, instead of handling in-house.
-            </Typography>
-          </div> */}
         </div>
         <Grid item md={4} xs={12} id="Contact Us">
-          <Typography variant="h6">Follow us</Typography>
+          <Typography variant="h6" className={styles["social-name"]}>
+            Follow us
+          </Typography>
           <div>
             <a
               href="https://www.facebook.com/profile.php?id=100063765325414&mibextid=ZbWKwL"
@@ -67,7 +53,23 @@ const Footer = () => {
           </div>
         </Grid>
         <Grid item md={5} xs={12}>
-          <Typography variant="h6">Contact us</Typography>
+          <Typography variant="h6" className={styles["social-name"]}>
+            Email us
+          </Typography>
+          <div className={styles["contact-us"]}>
+            <img src={call_icon} alt="a" style={{ marginRight: "15px" }} />
+            <Typography
+              variant="subtitle1"
+              className={styles["contact-detail"]}
+            >
+              kpl.karunadu@gmail.com
+            </Typography>
+          </div>
+        </Grid>
+        <Grid item md={3} xs={12}>
+          <Typography variant="h6" className={styles["social-name"]}>
+            Contact us
+          </Typography>
           <div className={styles["contact-us"]}>
             <img src={call_icon} alt="a" style={{ marginRight: "15px" }} />
             <div>
@@ -86,32 +88,36 @@ const Footer = () => {
             </div>
           </div>
         </Grid>
-        <Grid item md={3} xs={12}>
-          <Typography variant="h6">Email us</Typography>
-          <div className={styles["contact-us"]}>
-            <img src={call_icon} alt="a" style={{ marginRight: "15px" }} />
-            <Typography
-              variant="subtitle1"
-              className={styles["contact-detail"]}
-            >
-              kpl.karunadu@gmail.com
-            </Typography>
-          </div>
-        </Grid>
       </Grid>
-      <hr className={styles["footer-border"]} />
+      <hr
+        className={styles["footer-border"]}
+        style={{ marginTop: mobile ? "0" : "30px" }}
+      />
 
       <Grid container sx={{ p: { xs: "1% 10% 10% 10%", sm: "1% 5% 1% 5%" } }}>
         <Grid item md={6} xs={12}>
-          <Typography variant="h6">
+          <Typography
+            variant="subtitle2"
+            className={styles["footer-copyright"]}
+          >
             Copyright © 2024 Karunadu Cricket League. All Rights Reserved.
           </Typography>
         </Grid>
-        <Grid item md={3} xs={12}>
-          <Typography variant="h6">Terms of Use</Typography>
+        <Grid item md={3} xs={6}>
+          <Typography
+            variant="subtitle2"
+            className={styles["footer-copyright"]}
+          >
+            Terms of Use
+          </Typography>
         </Grid>
-        <Grid item md={3} xs={12}>
-          <Typography variant="h6">Privacy Policy</Typography>
+        <Grid item md={3} xs={6}>
+          <Typography
+            variant="subtitle2"
+            className={styles["footer-copyright"]}
+          >
+            Privacy Policy
+          </Typography>
         </Grid>
       </Grid>
     </>

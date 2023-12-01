@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 // import Tournaments from "./pages/Tournaments";
 import Footer from "./globalComponents/Footer/Footer";
-import Gallery from "./pages/Gallery";
+import Gallerys from "./pages/Gallery";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
 
 const theme = createTheme({
@@ -31,12 +31,40 @@ const theme = createTheme({
       },
     },
     h3: {
-      fontSize: "30px",
+      fontSize: "24px",
       lineHeight: "64px",
       "@media (max-width:600px)": {
         // for mobile screens
-        fontSize: "36px",
+        fontSize: "20px",
         lineHeight: "36px",
+      },
+    },
+    h6: {
+      fontSize: "20px",
+      // lineHeight: "64px",
+      fontFamily: "Montserrat",
+      "@media (max-width:600px)": {
+        // for mobile screens
+        fontSize: "16px",
+        lineHeight: "36px",
+      },
+    },
+    body1: {
+      fontSize: "16px",
+      // lineHeight: "64px",
+      "@media (max-width:600px)": {
+        // for mobile screens
+        fontSize: "14px",
+        lineHeight: "36px",
+      },
+    },
+    subtitle1: {
+      fontSize: "22px",
+      // lineHeight: "64px",
+      fontWeight: "600",
+      "@media (max-width:600px)": {
+        // for mobile screens
+        fontSize: "20px",
       },
     },
   },
@@ -59,7 +87,7 @@ function App() {
             element={
               <>
                 <HeroBanner />
-                <Gallery />
+                <Gallerys />
               </>
             }
           />
