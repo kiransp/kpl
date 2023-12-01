@@ -1,12 +1,6 @@
 import { Grid, Typography, useMediaQuery } from "@mui/material";
 import styles from "./Footer.module.scss";
-import {
-  call_icon,
-  fb_icon,
-  insta_icon,
-  twitter_icon,
-  yt_icon,
-} from "../../Images";
+import { call_icon, fb_icon, insta_icon, yt_icon } from "../../Images";
 import { useTheme } from "@emotion/react";
 
 const Footer = () => {
@@ -42,29 +36,54 @@ const Footer = () => {
             </Typography>
           </div> */}
         </div>
-        <Grid item md={6} xs={12} id="Contact Us">
+        <Grid item md={4} xs={12} id="Contact Us">
           <Typography variant="h6">Follow us</Typography>
           <div>
-            <img src={fb_icon} alt="a" className={styles["social-icons"]} />
-            <img
-              src={twitter_icon}
-              alt="a"
-              className={styles["social-icons"]}
-            />
-            <img src={insta_icon} alt="a" className={styles["social-icons"]} />
-            <img src={yt_icon} alt="a" className={styles["social-icons"]} />
+            <a
+              href="https://www.facebook.com/profile.php?id=100063765325414&mibextid=ZbWKwL"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={fb_icon} alt="a" className={styles["social-icons"]} />
+            </a>
+            <a
+              href="https://youtube.com/@rktigerssportsclub732?si=6wp3WxDWoNe8o_VN"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={yt_icon} alt="a" className={styles["social-icons"]} />
+            </a>
+            <a
+              href="https://instagram.com/rktigerssportsclub?igshid=NzZlODBkYWE4Ng=="
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={insta_icon}
+                alt="a"
+                className={styles["social-icons"]}
+              />
+            </a>
           </div>
         </Grid>
-        <Grid item md={3} xs={12}>
+        <Grid item md={5} xs={12}>
           <Typography variant="h6">Contact us</Typography>
           <div className={styles["contact-us"]}>
             <img src={call_icon} alt="a" style={{ marginRight: "15px" }} />
-            <Typography
-              variant="subtitle1"
-              className={styles["contact-detail"]}
-            >
-              +91 9898 9996 66
-            </Typography>
+            <div>
+              <Typography
+                variant="subtitle1"
+                className={styles["contact-detail"]}
+              >
+                +91 9686 90 6426
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                className={styles["contact-detail"]}
+              >
+                +91 9742 99 8333
+              </Typography>
+            </div>
           </div>
         </Grid>
         <Grid item md={3} xs={12}>

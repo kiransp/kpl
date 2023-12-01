@@ -37,9 +37,16 @@ const HomeGallery = () => {
       <Grid xs={12} sx={{ display: "flex", justifyContent: "center" }}>
         <Button
           variant="contained"
+          size="large"
           sx={{
             backgroundColor: "#000",
             border: "1px solid #FFF",
+            fontFamily: "Montserrat",
+            "&:hover": {
+              backgroundColor: "#FFFF00",
+              color: "#000",
+              border: "none",
+            },
           }}
           onClick={() => navigate("/Gallery")}
         >

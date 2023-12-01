@@ -31,7 +31,7 @@ const theme = createTheme({
       },
     },
     h3: {
-      fontSize: "40px",
+      fontSize: "30px",
       lineHeight: "64px",
       "@media (max-width:600px)": {
         // for mobile screens
