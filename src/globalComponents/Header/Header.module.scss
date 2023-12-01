@@ -8,9 +8,10 @@
 }
 %nav-link {
   text-decoration: none;
-  margin-right: 25px;
+  margin-right: 40px;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
 }
 .nav-link-mobile {
   @extend %nav-link;
@@ -30,6 +31,9 @@
   padding: 15px 20px 14px;
   position: relative;
   text-decoration: none;
+  font-weight: 800;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
 }
 
 .dislodged-border,

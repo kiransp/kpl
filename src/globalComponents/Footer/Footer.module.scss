@@ -1,3 +1,7 @@
+.social-name {
+  font-family: "Montserrat", sans-serif;
+  padding: 12px 0;
+}
 .social-icons {
   margin-right: 15px;
 }
@@ -6,11 +10,18 @@
   align-items: center;
 }
 .contact-detail {
-  font-weight: bold;
+  // font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  // font-size: 22px;
 }
 .footer-border {
-  background-color: #008fec;
+  background-color: #d4d4d4;
   width: 90%;
-  height: 2px;
-  border: 1px solid #008fec;
+  height: 1px;
+  border: 0px solid #d4d4d4;
+  // margin-top: 30px;
+}
+.footer-copyright {
+  font-family: "Montserrat", sans-serif;
+  // font-size: 12px;
 }
