@@ -37,21 +37,7 @@ const HomeGallery = () => {
           Recent Match Photos
         </Typography>
       </Grid>
-      {/* {galleryImages.map(({ src, alt }, index) => (
-        <>
-          {index <= 3 && (
-            <Grid
-              item
-              md={6}
-              xs={12}
-              className={styles["hg-images"]}
-              sx={{ p: { xs: "0 0 20px 0", sm: "20px" } }}
-            >
-              <img src={src} alt={alt} width="100%" />
-            </Grid>
-          )}
-        </>
-      ))} */}
+
       <Grid item md={12}>
         <ImageList sx={{ width: "100%" }} cols={2} variant="masonry">
           {galleryImages.slice(0, 4).map((item, index) => (

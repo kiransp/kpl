@@ -6,8 +6,10 @@ const HeroBanner = () => {
   const theme = useTheme();
   const mobile = useMediaQuery(theme.breakpoints.down("sm"));
   const bigScreen = useMediaQuery(theme.breakpoints.up("xl"));
+
   console.log("Mobile ", mobile);
   console.log("bigScreen ", bigScreen);
+
   return (
     <Grid
       container
@@ -18,7 +20,7 @@ const HeroBanner = () => {
           sm: `url(${bannerImage})`,
         },
         height: bigScreen ? "1024px" : "746px",
-        backgroundSize: bigScreen ? "contain" : "contain",
+        backgroundSize: mobile ? "contain" : "cover",
       }}
     >
       {/* {mobile ? (

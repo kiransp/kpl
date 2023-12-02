@@ -4,8 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 // import Tournaments from "./pages/Tournaments";
 import Footer from "./globalComponents/Footer/Footer";
-import Gallerys from "./pages/Gallery";
-import HeroBanner from "./components/HeroBanner/HeroBanner";
+import Gallery from "./pages/Gallery";
 
 const theme = createTheme({
   // Override or create new styles, colors, palettes...
@@ -97,8 +96,7 @@ function App() {
             path="/Gallery"
             element={
               <>
-                <HeroBanner />
-                <Gallerys />
+                <Gallery />
               </>
             }
           />

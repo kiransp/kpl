@@ -1,13 +1,17 @@
 export const kplLogo =
   "https://firebasestorage.googleapis.com/v0/b/whatsapp-61c82.appspot.com/o/kpl_logo_cropped.png?alt=media&token=d15be49f-9bec-4861-88ff-9f6528be974b";
 export const bannerImage =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/fullDtBanner.png?alt=media&token=1165690f-13e0-4b8d-8654-9692189fd259";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/dt_plain.png?alt=media&token=22927c5e-b459-4ecc-a4cf-8a1fb3e12273";
 export const bannerImageMobile =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/mobile_banner.png?alt=media&token=aa302621-2400-4515-a2cd-d069aaa028bf";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/sp_plain.png?alt=media&token=c7f1ca00-fb4c-46a2-8284-237e778a3203";
 export const abtBannerDesktop =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_dt.png?alt=media&token=b35c3312-19f0-4dbc-a4ca-440b8bba3710";
 export const abtBannerMobile =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_sp.png?alt=media&token=150edc38-f5cb-47f8-b06a-00f43d4c60a0";
+export const innerBannerDT =
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/inner_banners_1920.png?alt=media&token=7d8fd610-03ee-4977-935e-38617873a921";
+export const inerBannerMB =
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/inner_banner_375.png?alt=media&token=315f7276-87a1-426f-852d-8f1bb769565c";
 export const hg_placeholder =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/gallery_po.png?alt=media&token=1ee1b9d8-059d-4f6c-8cee-f1a8d5e7f792";
 export const video_thumbnail =
