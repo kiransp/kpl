@@ -27,17 +27,19 @@ const About = () => {
           About
         </Typography>
         <Typography variant="h1" className={styles["about-title"]}>
-          The Cricket Pulse Story, Beyond the boundry
+          Empowering Unity and Social Responsibility
         </Typography>
         <Typography variant="body1" className={styles["about-desc"]}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-          blanditiis tenetur unde suscipit, quam beatae rerum inventore
-          consectetur, neque doloribus, cupiditate numquam dignissimos laborum
-          fugiat deleniti? Eum quasi quidem quibusdam. Lorem ipsum dolor sit
-          amet, consectetur adipisicing elit. Quos blanditiis tenetur unde
-          suscipit, quam beatae rerum inventore consectetur, neque doloribus,
-          cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi
-          quidem quibusdam.
+          RK Tigers, under the steadfast leadership of Mr. Ramesh Kamble, stands
+          as a formidable youth team that values inclusivity and unity across
+          diverse backgrounds. Mr. Kamble, a pillar of strength for the group,
+          has dedicated himself to upholding the team's integrity. The RK Tigers
+          are actively involved in a range of social initiatives, including but
+          not limited to Blood Donation, Eye Donation, Health Camps, and
+          Plantation drives, aligning with the ethos of RK Tigers Sports Club.
+          Remarkably, the youth team avoids falling into the clutches of
+          detrimental habits and channels their energy into sports like cricket,
+          bodybuilding, karate, and other athletic pursuits.
         </Typography>
       </Grid>
     </Grid>

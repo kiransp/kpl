@@ -1,16 +1,17 @@
 export const kplLogo =
   "https://firebasestorage.googleapis.com/v0/b/whatsapp-61c82.appspot.com/o/kpl_logo_cropped.png?alt=media&token=d15be49f-9bec-4861-88ff-9f6528be974b";
 export const bannerImage =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/fullDtBanner.png?alt=media&token=1165690f-13e0-4b8d-8654-9692189fd259";
-// "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/desktop_banner.png?alt=media&token=93ce63a7-c910-42c3-bb03-0cd588736863";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/dt_plain.png?alt=media&token=22927c5e-b459-4ecc-a4cf-8a1fb3e12273";
 export const bannerImageMobile =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/mobile_banner.png?alt=media&token=aa302621-2400-4515-a2cd-d069aaa028bf";
-// "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/hero_banner_mobile.png?alt=media&token=9c6e33ee-3bca-4450-a14a-ef186fc86b42";
-// "https://gfc.target.com/elevatewebsiteproduction/elevate_2023/hero_banner_mobile.png";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/sp_plain.png?alt=media&token=c7f1ca00-fb4c-46a2-8284-237e778a3203";
 export const abtBannerDesktop =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_dt.png?alt=media&token=b35c3312-19f0-4dbc-a4ca-440b8bba3710";
 export const abtBannerMobile =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_sp.png?alt=media&token=150edc38-f5cb-47f8-b06a-00f43d4c60a0";
+export const innerBannerDT =
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/inner_banners_1920.png?alt=media&token=7d8fd610-03ee-4977-935e-38617873a921";
+export const inerBannerMB =
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/inner_banner_375.png?alt=media&token=315f7276-87a1-426f-852d-8f1bb769565c";
 export const hg_placeholder =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/gallery_po.png?alt=media&token=1ee1b9d8-059d-4f6c-8cee-f1a8d5e7f792";
 export const video_thumbnail =
@@ -27,3 +28,77 @@ export const mail_icon =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/mail_icon.png?alt=media&token=90a7aa6c-564c-4f09-a640-4497c3acce01";
 export const call_icon =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/phone_icon.png?alt=media&token=46a0c937-c793-4eec-b76c-674b3c6d29f1";
+export const galleryImages = [
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/old_kpl.jpeg?alt=media&token=cbc08a01-5b14-4d97-82f2-60a5dabf8a0f",
+    alt: "",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0019.jpeg?alt=media&token=73c49506-8658-445d-b656-a7dc081f1816",
+    alt: "",
+    width: 800,
+    height: 600,
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0023.jpeg?alt=media&token=35a9d7da-7570-4739-8489-0631e7401e53",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0040.jpeg?alt=media&token=75407529-0675-4d44-b247-7f8cd7589954",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0021.jpeg?alt=media&token=99e74e12-1df5-4824-becc-a9bafec49795",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0043.jpeg?alt=media&token=d833da57-079c-4176-96c3-1850053efcb4",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0015.jpeg?alt=media&token=a2439591-0d44-4270-ac34-551cd0e7dda0",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0041.jpeg?alt=media&token=a952431f-7b88-4f08-8035-2d54a54777bc",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0026.jpeg?alt=media&token=42e087be-e864-47b2-9634-3b48426ddf32",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0016.jpeg?alt=media&token=e83ff21d-6bbf-4b1e-82cd-463c32b818ff",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0051.jpeg?alt=media&token=ec1969d5-44bb-487f-bc30-d5e605f2c867",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0020.jpeg?alt=media&token=dd201ee8-98fd-4d54-a91d-663548bb9f1b",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0032.jpeg?alt=media&token=61dd8761-e34a-4252-9d36-48334e13c400",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0033.jpeg?alt=media&token=46cdd292-b11a-48cf-a23a-a33b589ff300",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0044.jpeg?alt=media&token=812896e8-6325-407f-b184-5c9afdb36305",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0028.jpeg?alt=media&token=790a54e9-b26a-45b9-9d44-cbac211ccd29",
+    alt: "",
+  },
+  {
+    src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/galleryImages%2FIMG-20231128-WA0023.jpeg?alt=media&token=35a9d7da-7570-4739-8489-0631e7401e53",
+    alt: "",
+  },
+];

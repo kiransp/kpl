@@ -1,10 +1,7 @@
-import { Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
-import { video_thumbnail } from "../../Images";
+import { Grid, Typography } from "@mui/material";
 import styles from "./Story.module.scss";
 
 const Story = () => {
-  const theme = useTheme();
-  const mobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <Grid
       container
@@ -12,32 +9,32 @@ const Story = () => {
       sx={{ p: { xs: "10%", sm: "5%" } }}
     >
       <Grid item md={6} xs={12}>
-        <img
-          src={mobile ? video_thumbnail : video_thumbnail}
-          alt="story banner"
-          //   width={"90%"}
-          style={{ width: mobile ? "100%" : "90%" }}
-        />
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/Mi_dLVXOVFc"
+          title="U.P.L(Unkal Premier League)OFFICIAL Teaser.2021 From RK TIGERS SPORTS CLUB HUBLI"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </Grid>
       <Grid item md={6} xs={12} sx={{ pl: { xs: 0, sm: "30px" } }}>
         <Typography
           variant="h3"
           sx={{ fontFamily: "Montserrat", fontWeight: "600" }}
         >
-          Video
+          Story
         </Typography>
         <Typography variant="h1" className={styles["story-title"]}>
-          The Cricket Pulse Story, Beyond the Boundary
+          Unkal Premier League
         </Typography>
         <Typography variant="body1" className={styles["story-desc"]}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos
-          blanditiis tenetur unde suscipit, quam beatae rerum inventore
-          consectetur, neque doloribus, cupiditate numquam dignissimos laborum
-          fugiat deleniti? Eum quasi quidem quibusdam. Lorem ipsum dolor sit
-          amet, consectetur adipisicing elit. Quos blanditiis tenetur unde
-          suscipit, quam beatae rerum inventore consectetur, neque doloribus,
-          cupiditate numquam dignissimos laborum fugiat deleniti? Eum quasi
-          quidem quibusdam.
+          Unkal Premier League, Hubli's pioneering cricket tournament, promotes
+          talent. In the past two seasons, emerging players formed a winning
+          Unkal team for district tournaments. This season, 8 franchise teams in
+          unique jerseys, with officials from different districts. UPL
+          transcends cricket—it's a festival for enthusiasts."
         </Typography>
       </Grid>
     </Grid>

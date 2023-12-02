@@ -8,18 +8,18 @@ const Footer = () => {
   const mobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <>
+      <div style={{ position: "relative", width: "100%" }}>
+        <img
+          src={
+            mobile
+              ? "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/footer_mobile.png?alt=media&token=f043a78b-9657-4e49-b621-f54f832b50b6"
+              : "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/desktop_footer_txt.png?alt=media&token=1eb8caf4-6a9e-4eb1-a1fb-afadcfd5c0e3"
+          }
+          alt="de"
+          width="100%"
+        />
+      </div>
       <Grid container sx={{ p: { xs: "0 10% 10% 10%", sm: "0 5% 2% 5%" } }}>
-        <div style={{ position: "relative", width: "100%" }}>
-          <img
-            src={
-              mobile
-                ? "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/footer_mobile.png?alt=media&token=f043a78b-9657-4e49-b621-f54f832b50b6"
-                : "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/desktop_footer_txt.png?alt=media&token=1eb8caf4-6a9e-4eb1-a1fb-afadcfd5c0e3"
-            }
-            alt="de"
-            width="100%"
-          />
-        </div>
         <Grid item md={4} xs={12} id="Contact Us">
           <Typography variant="h6" className={styles["social-name"]}>
             Follow us
