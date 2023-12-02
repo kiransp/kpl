@@ -58,10 +58,10 @@ const HomeGallery = () => {
             backgroundColor: "#000",
             border: "1px solid #FFF",
             fontFamily: "Montserrat",
-            fontSize: "20px",
+            fontSize: { xs: "14px", sm: "20px" },
             fontWeight: "800",
             borderRadius: "0",
-            padding: "15px 20px 14px",
+            padding: { xs: "10px", sm: "15px 20px 14px" },
             textTransform: "none",
             marginTop: "30px",
             "&:hover": {

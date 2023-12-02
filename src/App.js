@@ -59,12 +59,23 @@ const theme = createTheme({
       },
     },
     subtitle1: {
+      fontFamily: "Montserrat",
       fontSize: "22px",
       // lineHeight: "64px",
       fontWeight: "600",
       "@media (max-width:600px)": {
         // for mobile screens
         fontSize: "20px",
+      },
+    },
+    subtitle2: {
+      fontFamily: "Montserrat",
+      fontSize: "14px",
+      // lineHeight: "64px",
+      fontWeight: "400",
+      "@media (max-width:600px)": {
+        // for mobile screens
+        fontSize: "14px",
       },
     },
   },

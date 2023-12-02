@@ -17,7 +17,7 @@ const HeroBanner = () => {
           xs: `url(${bannerImageMobile})`,
           sm: `url(${bannerImage})`,
         },
-        height: bigScreen ? "1024px" : "800px",
+        height: bigScreen ? "1024px" : "746px",
         backgroundSize: bigScreen ? "contain" : "contain",
       }}
     >
