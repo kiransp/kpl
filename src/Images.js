@@ -3,7 +3,7 @@ export const kplLogo =
 export const bannerImage =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/banners%2Fdt_plain.png?alt=media&token=b0abcd47-ad0f-40cb-b3a6-eb2b9175ce7c";
 export const bannerImageMobile =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/banners%2Fsp_plain.png?alt=media&token=1b32856a-f30c-4e01-8692-02d4b7842ab8";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/sp_plain_.png?alt=media&token=d3ff2523-a9bf-4d21-8cbb-dd09bb3ea2e3";
 export const abtBannerDesktop =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_dt.png?alt=media&token=b35c3312-19f0-4dbc-a4ca-440b8bba3710";
 export const abtBannerMobile =
