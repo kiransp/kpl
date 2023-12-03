@@ -5,9 +5,9 @@ export const bannerImage =
 export const bannerImageMobile =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/sp_plain_.png?alt=media&token=d3ff2523-a9bf-4d21-8cbb-dd09bb3ea2e3";
 export const abtBannerDesktop =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/banners%2Fabout_banner_dt.png?alt=media&token=d4c35e4e-1366-4b4b-9c35-1963ee029d65";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_dt.png?alt=media&token=ddcc5349-3a15-4d94-8f78-4a30c3daf664";
 export const abtBannerMobile =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/banners%2Fabout_banner_sp.png?alt=media&token=cc626e89-688f-415a-9f7e-88d833df93f7";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_sp.png?alt=media&token=2e7431ba-ddb9-4c8e-906c-816ec4c787ec";
 export const innerBannerDT =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/banners%2Finner_banners_1920.png?alt=media&token=4710e4b7-b058-4770-8e45-e963ff27b936";
 export const inerBannerMB =
