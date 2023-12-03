@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 // import Tournaments from "./pages/Tournaments";
 import Footer from "./globalComponents/Footer/Footer";
 import Gallery from "./pages/Gallery";
+// import { Button } from "@mui/material";
+// import NavigationIcon from "@mui/icons-material/Navigation";
 
 const theme = createTheme({
   // Override or create new styles, colors, palettes...
@@ -82,9 +84,6 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      {/* <div>
-        <h1>Hello </h1>
-      </div> */}
       <BrowserRouter>
         <header>
           <Header />
@@ -104,6 +103,18 @@ function App() {
         <footer>
           <Footer />
         </footer>
+        {/* <Button
+          style={{
+            position: "fixed",
+            right: "20px",
+            bottom: "20px",
+            border: "1px solid red",
+            borderRadius: "50%",
+          }}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <NavigationIcon fontSize="large" color="#FFF" />
+        </Button> */}
       </BrowserRouter>
     </ThemeProvider>
   );

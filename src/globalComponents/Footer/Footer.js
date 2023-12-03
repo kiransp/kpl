@@ -12,8 +12,8 @@ const Footer = () => {
         <img
           src={
             mobile
-              ? "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/footer_mobile.png?alt=media&token=f043a78b-9657-4e49-b621-f54f832b50b6"
-              : "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/desktop_footer_txt.png?alt=media&token=1eb8caf4-6a9e-4eb1-a1fb-afadcfd5c0e3"
+              ? "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/banners%2Ffooter_sp.png?alt=media&token=313c8fd5-cefa-49f7-932b-7d29f5df8063"
+              : "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/banners%2Ffooter_yellow%26white_img_dt.png?alt=media&token=aa863b4e-d8d9-4606-9ced-14cc69a01375"
           }
           alt="de"
           width="100%"

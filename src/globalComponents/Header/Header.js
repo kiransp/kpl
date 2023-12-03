@@ -16,7 +16,7 @@ import styles from "./Header.module.scss";
 import { NavHashLink } from "react-router-hash-link";
 
 const drawerWidth = 240;
-const navItems = ["About", "Gallery", "Contact Us"];
+const navItems = ["Home", "About", "Gallery", "Contact Us"];
 
 function Header(props) {
   const { window } = props;
@@ -39,7 +39,7 @@ function Header(props) {
             <ListItemButton sx={{ textAlign: "left" }}>
               <NavHashLink
                 smooth
-                to={`/#${item}`}
+                to={index === 0 ? "/" : `/#${item}`}
                 key={item}
                 className={styles["nav-link-mobile"]}
               >
@@ -75,7 +75,7 @@ function Header(props) {
               <>
                 <NavHashLink
                   smooth
-                  to={`/#${item}`}
+                  to={index === 0 ? "/" : `/#${item}`}
                   key={item}
                   className={
                     index === navItems.length - 1
