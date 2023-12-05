@@ -25,6 +25,7 @@ const theme = createTheme({
     h1: {
       fontSize: "64px",
       lineHeight: "64px",
+      fontFamily: "Montserrat",
       "@media (max-width:600px)": {
         // for mobile screens
         fontSize: "36px",
