@@ -1,9 +1,9 @@
 export const kplLogo =
   "https://firebasestorage.googleapis.com/v0/b/whatsapp-61c82.appspot.com/o/kpl_logo_cropped.png?alt=media&token=d15be49f-9bec-4861-88ff-9f6528be974b";
 export const bannerImage =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/banners%2Fdt_plain.png?alt=media&token=215f657b-a19d-42fc-b110-88902b7a47f1";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/new%2Fdt_plain.png?alt=media&token=1a2c0c5e-3f45-4e68-adb3-353637380e7c";
 export const bannerImageMobile =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/sp_plain_.png?alt=media&token=d3ff2523-a9bf-4d21-8cbb-dd09bb3ea2e3";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/new%2Fsp_plain.png?alt=media&token=51e28407-e543-4be0-ac94-7f3b9ef9ba9f";
 export const abtBannerDesktop =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_dt.png?alt=media&token=ddcc5349-3a15-4d94-8f78-4a30c3daf664";
 export const abtBannerMobile =
@@ -28,6 +28,10 @@ export const mail_icon =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/mail_icon.png?alt=media&token=90a7aa6c-564c-4f09-a640-4497c3acce01";
 export const call_icon =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/phone_icon.png?alt=media&token=46a0c937-c793-4eec-b76c-674b3c6d29f1";
+export const cupDT =
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/new%2Fcup_dt.png?alt=media&token=3823849c-9de5-45a9-8b51-cecffdb9085e";
+export const cupSP =
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/new%2Fcup_sp.png?alt=media&token=cee8729b-b031-43bc-8aa1-9bff67878766";
 export const galleryImages = [
   {
     src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/old_kpl.jpeg?alt=media&token=cbc08a01-5b14-4d97-82f2-60a5dabf8a0f",
