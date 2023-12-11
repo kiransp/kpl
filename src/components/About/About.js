@@ -30,16 +30,19 @@ const About = () => {
           Empowering Unity and Social Responsibility
         </Typography>
         <Typography variant="body1" className={styles["about-desc"]}>
-          RK Tigers, under the steadfast leadership of Mr. Ramesh Kamble, stands
-          as a formidable youth team that values inclusivity and unity across
-          diverse backgrounds. Mr. Kamble, a pillar of strength for the group,
-          has dedicated himself to upholding the team's integrity. The RK Tigers
-          are actively involved in a range of social initiatives, including but
-          not limited to Blood Donation, Eye Donation, Health Camps, and
-          Plantation drives, aligning with the ethos of RK Tigers Sports Club.
-          Remarkably, the youth team avoids falling into the clutches of
-          detrimental habits and channels their energy into sports like cricket,
-          bodybuilding, karate, and other athletic pursuits.
+          Under the unwavering leadership of Mr. Ramesh Kamble, RK Tigers stands
+          as a formidable youth team, championing inclusivity and unity across
+          diverse backgrounds. Mr. Kamble, a pillar of strength, dedicates
+          himself to upholding the team's integrity. Alongside him, the dynamic
+          trio of Manjunath Hosamani, Kiran Pawar and Devraj Koti actively
+          contribute to the team's success, blending their passion for sports
+          with a commitment to social initiatives. RK Tigers, engaged in
+          activities such as Blood Donation, Eye Donation, Health Camps, and
+          Plantation drives, exemplifies the ethos of the RK Tigers Sports Club.
+          Remarkably, the team, avoids detrimental habits, channeling their
+          energy into cricket, bodybuilding, karate, and various athletic
+          pursuits. RK Tigers Team create a powerful force that extends beyond
+          sports, leaving a positive impact on both the team and the community.
         </Typography>
       </Grid>
     </Grid>
