@@ -12,6 +12,10 @@ import {
 } from "@mui/material";
 import styles from "./RegisterForm.module.scss";
 import { useState } from "react";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../../firebase-config";
+import { ref, uploadBytes, getDownloadURL, getStorage } from "firebase/storage";
+import { v4 } from "uuid";
 
 export default function RegisterForm() {
   const [registerData, setRegisterData] = useState({
@@ -21,14 +25,55 @@ export default function RegisterForm() {
     batting: "",
     bowling: "",
     wicketKeeper: "",
-    aadharCard: "",
-    photo: "",
+    aadharCard: null,
+    photo: null,
   });
+  const playersCollectionRef = collection(db, "players");
+
+  // Upload variables
+  const storage = getStorage();
+  // end of upload variables
+
+  const createPlayer = async () => {
+    const [aadharLink, photoLink] = await uploadImages();
+
+    await addDoc(playersCollectionRef, {
+      ...registerData,
+      aadharCard: aadharLink,
+      photo: photoLink,
+    })
+      .then((data) => {
+        console.log("Data ", data);
+      })
+      .catch((error) => alert("An error occured "));
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log("Here in submit ", registerData);
+    createPlayer();
   }
+
+  async function uploadImage(image) {
+    const filePath = `players/${
+      registerData.aadharCard.name.split(".")[0] + "_" + v4()
+    }`;
+    const storageRef = ref(storage, filePath);
+
+    const response = await uploadBytes(storageRef, image);
+    const url = await getDownloadURL(response.ref);
+    return url;
+  }
+
+  async function uploadImages() {
+    const aadharAndPhoto = [registerData.aadharCard, registerData.photo];
+    const imagePromises = Array.from(aadharAndPhoto, (image) =>
+      uploadImage(image)
+    );
+
+    return await Promise.all(imagePromises);
+  }
+
   return (
     <>
       <Grid container sx={{ padding: { xs: "6%" } }}>
@@ -237,11 +282,11 @@ export default function RegisterForm() {
                       variant="outlined"
                       type="file"
                       required={true}
-                      value={registerData.aadharCard}
+                      //   value={registerData.aadharCard}
                       onChange={(e) =>
                         setRegisterData({
                           ...registerData,
-                          aadharCard: e.target.value,
+                          aadharCard: e.target.files[0],
                         })
                       }
                     />
@@ -256,11 +301,11 @@ export default function RegisterForm() {
                       variant="outlined"
                       type="file"
                       required={true}
-                      value={registerData.photo}
+                      //   value={registerData.photo}
                       onChange={(e) =>
                         setRegisterData({
                           ...registerData,
-                          photo: e.target.value,
+                          photo: e.target.files[0],
                         })
                       }
                     />
