@@ -6,9 +6,7 @@ import Home from "./pages/Home";
 import Footer from "./globalComponents/Footer/Footer";
 import Gallery from "./pages/Gallery";
 import Registration from "./pages/Registration";
-import { useEffect, useState } from "react";
-import { db } from "./firebase-config";
-import { collection, getDocs } from "firebase/firestore";
+import Admin from "./pages/Admin";
 // import { Button } from "@mui/material";
 // import NavigationIcon from "@mui/icons-material/Navigation";
 
@@ -87,17 +85,6 @@ const theme = createTheme({
   },
 });
 function App() {
-  const [players, setPlayers] = useState([]);
-  const playersCollectionRef = collection(db, "players");
-  useEffect(() => {
-    const getAllPlayers = async () => {
-      const data = await getDocs(playersCollectionRef);
-      setPlayers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-    getAllPlayers();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  console.log("players ", players);
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
@@ -120,6 +107,14 @@ function App() {
             element={
               <>
                 <Registration />
+              </>
+            }
+          />
+          <Route
+            path="/admin"
+            element={
+              <>
+                <Admin />
               </>
             }
           />
