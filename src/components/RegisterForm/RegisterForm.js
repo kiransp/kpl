@@ -16,6 +16,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import { ref, uploadBytes, getDownloadURL, getStorage } from "firebase/storage";
 import { v4 } from "uuid";
+import PopUp from "../../utils/PopUp";
 
 export default function RegisterForm() {
   const [registerData, setRegisterData] = useState({
@@ -30,6 +31,15 @@ export default function RegisterForm() {
   });
   const playersCollectionRef = collection(db, "players");
 
+  //   Pop up variables
+
+  const [open, setOpen] = useState(false);
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+  // end of pop up variable
   // Upload variables
   const storage = getStorage();
   // end of upload variables
@@ -44,6 +54,7 @@ export default function RegisterForm() {
     })
       .then((data) => {
         console.log("Data ", data);
+        setOpen(true);
       })
       .catch((error) => alert("An error occured "));
   };
@@ -76,6 +87,7 @@ export default function RegisterForm() {
 
   return (
     <>
+      <PopUp open={open} handleClose={handleClose} />
       <Grid container sx={{ padding: { xs: "6%" } }}>
         <Grid item md={1} xs={12}></Grid>
         <Grid item md={11} xs={12}>
