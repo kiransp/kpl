@@ -1,5 +1,7 @@
 import {
+  Backdrop,
   Button,
+  CircularProgress,
   FormControl,
   FormControlLabel,
   FormLabel,
@@ -30,21 +32,20 @@ export default function RegisterForm() {
     photo: null,
   });
   const playersCollectionRef = collection(db, "players");
-
+  const [isLoading, setIsLoading] = useState(false);
   //   Pop up variables
-
   const [open, setOpen] = useState(false);
-
   const handleClose = () => {
     setOpen(false);
   };
-
   // end of pop up variable
+
   // Upload variables
   const storage = getStorage();
   // end of upload variables
 
   const createPlayer = async () => {
+    setIsLoading(true);
     const [aadharLink, photoLink] = await uploadImages();
 
     await addDoc(playersCollectionRef, {
@@ -55,6 +56,18 @@ export default function RegisterForm() {
       .then((data) => {
         console.log("Data ", data);
         setOpen(true);
+        setIsLoading(false);
+        setRegisterData({
+          name: "",
+          email: "",
+          place: "",
+          batting: "",
+          bowling: "",
+          wicketKeeper: "",
+          aadharCard: null,
+          photo: null,
+        });
+        document.getElementById("player-form").reset();
       })
       .catch((error) => alert("An error occured "));
   };
@@ -88,6 +101,13 @@ export default function RegisterForm() {
   return (
     <>
       <PopUp open={open} handleClose={handleClose} />
+      <Backdrop
+        sx={{ color: "#fff", zIndex: (theme) => theme.zIndex.drawer + 1 }}
+        open={isLoading}
+        onClick={handleClose}
+      >
+        <CircularProgress color="inherit" />
+      </Backdrop>
       <Grid container sx={{ padding: { xs: "6%" } }}>
         <Grid item md={1} xs={12}></Grid>
         <Grid item md={11} xs={12}>
@@ -98,6 +118,7 @@ export default function RegisterForm() {
           <form
             className={styles["register-form"]}
             onSubmit={(e) => handleSubmit(e)}
+            id="player-form"
           >
             <Grid container>
               <Grid item md={5} xs={12}>
