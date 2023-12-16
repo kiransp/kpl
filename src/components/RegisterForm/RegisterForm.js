@@ -24,12 +24,14 @@ export default function RegisterForm() {
   const [registerData, setRegisterData] = useState({
     name: "",
     email: "",
+    mobile: "",
     place: "",
     batting: "",
     bowling: "",
     wicketKeeper: "",
     aadharCard: null,
     photo: null,
+    paymentSS: null,
   });
   const playersCollectionRef = collection(db, "players");
   const [isLoading, setIsLoading] = useState(false);
@@ -46,20 +48,22 @@ export default function RegisterForm() {
 
   const createPlayer = async () => {
     setIsLoading(true);
-    const [aadharLink, photoLink] = await uploadImages();
+    const [aadharLink, photoLink, paymentSSLink] = await uploadImages();
 
     await addDoc(playersCollectionRef, {
       ...registerData,
       aadharCard: aadharLink,
       photo: photoLink,
+      paymentSS: paymentSSLink,
+      createdDate: new Date(),
     })
       .then((data) => {
-        console.log("Data ", data);
         setOpen(true);
         setIsLoading(false);
         setRegisterData({
           name: "",
           email: "",
+          mobile: "",
           place: "",
           batting: "",
           bowling: "",
@@ -90,8 +94,12 @@ export default function RegisterForm() {
   }
 
   async function uploadImages() {
-    const aadharAndPhoto = [registerData.aadharCard, registerData.photo];
-    const imagePromises = Array.from(aadharAndPhoto, (image) =>
+    const aadhar_photo_payment = [
+      registerData.aadharCard,
+      registerData.photo,
+      registerData.paymentSS,
+    ];
+    const imagePromises = Array.from(aadhar_photo_payment, (image) =>
       uploadImage(image)
     );
 
@@ -162,7 +170,20 @@ export default function RegisterForm() {
                   }
                 />
               </Grid>
-              <Grid item md={7} xs={12}></Grid>
+              <Grid item md={1} xs={12}></Grid>
+              <Grid item md={5} xs={12}>
+                <TextField
+                  className={styles["reg-field"]}
+                  id="outlined-basic"
+                  label="Mobile"
+                  variant="outlined"
+                  required={true}
+                  value={registerData.mobile}
+                  onChange={(e) =>
+                    setRegisterData({ ...registerData, mobile: e.target.value })
+                  }
+                />
+              </Grid>
               <Grid item md={5} xs={12}>
                 <FormControl required={true}>
                   <FormLabel
@@ -308,7 +329,7 @@ export default function RegisterForm() {
                 <Grid item md={7} xs={12}></Grid>
                 <Grid item md={12} xs={12}>
                   <FormControl sx={{ width: "100%" }}>
-                    <InputLabel>Upload your Aadhar Card</InputLabel>
+                    <InputLabel>Upload your Aadhar Card*</InputLabel>
                     <TextField
                       className={styles["reg-field"]}
                       id="outlined-basic"
@@ -327,7 +348,7 @@ export default function RegisterForm() {
                 </Grid>
                 <Grid item md={12} xs={12}>
                   <FormControl sx={{ width: "100%" }}>
-                    <InputLabel>Upload your photo</InputLabel>
+                    <InputLabel>Upload your photo*</InputLabel>
                     <TextField
                       className={styles["reg-field"]}
                       id="outlined-basic"
@@ -339,6 +360,25 @@ export default function RegisterForm() {
                         setRegisterData({
                           ...registerData,
                           photo: e.target.files[0],
+                        })
+                      }
+                    />
+                  </FormControl>
+                </Grid>
+                <Grid item md={12} xs={12}>
+                  <FormControl sx={{ width: "100%" }}>
+                    <InputLabel>Upload the screenshot of payment*</InputLabel>
+                    <TextField
+                      className={styles["reg-field"]}
+                      id="outlined-basic"
+                      variant="outlined"
+                      type="file"
+                      required={true}
+                      //   value={registerData.photo}
+                      onChange={(e) =>
+                        setRegisterData({
+                          ...registerData,
+                          paymentSS: e.target.files[0],
                         })
                       }
                     />
