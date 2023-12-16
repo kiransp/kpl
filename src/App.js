@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 // import Tournaments from "./pages/Tournaments";
 import Footer from "./globalComponents/Footer/Footer";
 import Gallery from "./pages/Gallery";
+import Registration from "./pages/Registration";
 // import { Button } from "@mui/material";
 // import NavigationIcon from "@mui/icons-material/Navigation";
 
@@ -97,6 +98,14 @@ function App() {
             element={
               <>
                 <Gallery />
+              </>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <>
+                <Registration />
               </>
             }
           />
