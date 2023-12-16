@@ -1,15 +1,15 @@
-.register-form {
-  //   display: flex;
-  //   width: 100%;
-}
-.reg-field-container {
-  //   width: 100%;
-  //   margin-top: 20px;
-}
 .reg-field {
   width: 100%;
   margin-top: 40px !important;
   label {
     line-height: 1;
   }
+}
+.reg-title {
+  color: #e42722;
+  font-weight: 600 !important;
+}
+.reg-fields-rule {
+  margin-top: 20px !important;
+  margin-bottom: -20px !important;
 }

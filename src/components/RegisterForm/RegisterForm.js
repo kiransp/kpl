@@ -120,14 +120,21 @@ export default function RegisterForm() {
         <Grid item md={1} xs={12}></Grid>
         <Grid item md={11} xs={12}>
           <Typography variant="h3">REGISTRATION</Typography>
-          <Typography variant="h1">Fill Your Details</Typography>
-          <Typography variant="subtitle2">All fields are mandatory</Typography>
+          <Typography variant="h1" className={styles["reg-title"]}>
+            Fill Your Details
+          </Typography>
 
           <form
             className={styles["register-form"]}
             onSubmit={(e) => handleSubmit(e)}
             id="player-form"
           >
+            <Typography
+              variant="subtitle2"
+              className={styles["reg-fields-rule"]}
+            >
+              All fields are mandatory
+            </Typography>
             <Grid container>
               <Grid item md={5} xs={12}>
                 <TextField
@@ -389,6 +396,13 @@ export default function RegisterForm() {
                     type="submit"
                     variant="contained"
                     className={styles["reg-field"]}
+                    sx={{
+                      backgroundColor: "#001585",
+                      fontWeight: "600",
+                      "&:hover": {
+                        backgroundColor: "#CC0000",
+                      },
+                    }}
                   >
                     REGISTER
                   </Button>
