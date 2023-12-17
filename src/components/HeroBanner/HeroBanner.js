@@ -1,14 +1,13 @@
 import { Grid, useMediaQuery, useTheme } from "@mui/material";
 import styles from "./HeroBanner.module.scss";
 import { bannerImage, bannerImageMobile } from "../../Images";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { NavHashLink } from "react-router-hash-link";
 
 const HeroBanner = () => {
   const theme = useTheme();
   const mobile = useMediaQuery(theme.breakpoints.down("sm"));
   const bigScreen = useMediaQuery(theme.breakpoints.up("xl"));
-
-  console.log("Mobile ", mobile);
-  console.log("bigScreen ", bigScreen);
 
   return (
     <Grid
@@ -21,8 +20,25 @@ const HeroBanner = () => {
         },
         height: bigScreen ? "1024px" : "746px",
         backgroundSize: mobile ? "contain" : "cover",
+        position: "relative",
       }}
     >
+      <NavHashLink
+        to="/register"
+        className={styles["dislodged-border"]}
+        style={{
+          position: "absolute",
+          bottom: mobile ? "25%" : "10%",
+          left: mobile ? "25%" : "9%",
+          padding: mobile ? "5px 15px" : "auto",
+        }}
+      >
+        <span style={{ display: "flex", alignItems: "center" }}>
+          REGISTER NOW <ArrowRightAltIcon fontSize="large" />
+        </span>
+      </NavHashLink>
+
+      {/* </Button> */}
       {/* {mobile ? (
         <Grid item className={styles["home-logo-img-container"]}>
           <img

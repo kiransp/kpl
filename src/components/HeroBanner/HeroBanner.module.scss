@@ -18,4 +18,33 @@
     flex-direction: column;
     align-items: center;
   }
+  .dislodged-border {
+    background: yellow;
+    color: #000;
+    display: inline-block;
+    font-family: sans-serif;
+    padding: 15px 20px 14px;
+    position: relative;
+    text-decoration: none;
+    font-weight: 800;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+  }
+
+  .dislodged-border,
+  .dislodged-border:before {
+    box-sizing: border-box;
+  }
+
+  .dislodged-border:before {
+    border: 2px solid #fff;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 7px;
+    left: 7px;
+    z-index: -1;
+  }
 }
