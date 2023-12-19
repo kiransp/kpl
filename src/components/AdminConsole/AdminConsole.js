@@ -1,8 +1,9 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
+import MUIDataTable from "mui-datatables";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase-config";
-import MUIDataTable from "mui-datatables";
+import SignIn from "../SignIn/Signin";
 
 const columns = [
   {
@@ -75,6 +76,7 @@ const columns = [
 ];
 
 export default function AdminConsole() {
+  const [isAuthUser, setIsAuthUser] = React.useState(false);
   const [players, setPlayers] = React.useState([]);
   const playersCollectionRef = collection(db, "players");
   React.useEffect(() => {
@@ -85,81 +87,87 @@ export default function AdminConsole() {
     getAllPlayers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  console.log("players ", players);
+  React.useEffect(() => {
+    setIsAuthUser(sessionStorage.getItem("isLoggedIn"));
+  }, []);
   return (
-    <Box sx={{ height: 400, width: "100%" }}>
-      <MUIDataTable
-        title={"Registered players information"}
-        data={players}
-        columns={columns}
-        options={{
-          selectableRows: "none",
-          responsive: "standard",
-          searchAlwaysOpen: false,
-          searchPlaceholder: "Search here",
-          viewColumns: false,
-          filter: false,
-          rowsPerPage: 100,
-          customRowRender: (data) => {
-            const [
-              name,
-              email,
-              place,
-              mobile,
-              batting,
-              bowling,
-              keeping,
-              aadhar,
-              photo,
-              payment,
-            ] = data;
-            return (
-              <>
-                <tr style={{ textAlign: "center" }}>
-                  <td>{name}</td>
-                  <td>{email}</td>
-                  <td>{place}</td>
-                  <td>{mobile}</td>
-                  <td>{batting}</td>
-                  <td>{bowling}</td>
-                  <td>{keeping}</td>
-                  <td>
-                    <a href={aadhar} target="_blank" rel="noreferrer">
-                      <img
-                        src={aadhar}
-                        width="50%"
-                        height="100vh"
-                        alt="id proof"
-                      />
-                    </a>
-                  </td>
-                  <td>
-                    <a href={photo} target="_blank" rel="noreferrer">
-                      <img
-                        src={photo}
-                        width="50%"
-                        height="100vh"
-                        alt="dp proof"
-                        onClick={(e) => window.redire}
-                      />
-                    </a>
-                  </td>
-                  <td>
-                    <a href={payment} target="_blank" rel="noreferrer">
-                      <img
-                        src={payment}
-                        width="50%"
-                        height="100vh"
-                        alt="payment proof"
-                      />
-                    </a>
-                  </td>
-                </tr>
-              </>
-            );
-          },
-        }}
-      />
+    <Box>
+      {isAuthUser ? (
+        <MUIDataTable
+          title={"Registered players information"}
+          data={players}
+          columns={columns}
+          options={{
+            selectableRows: "none",
+            responsive: "standard",
+            searchAlwaysOpen: false,
+            searchPlaceholder: "Search here",
+            viewColumns: false,
+            filter: false,
+            rowsPerPage: 100,
+            customRowRender: (data) => {
+              const [
+                name,
+                email,
+                place,
+                mobile,
+                batting,
+                bowling,
+                keeping,
+                aadhar,
+                photo,
+                payment,
+              ] = data;
+              return (
+                <>
+                  <tr style={{ textAlign: "center" }}>
+                    <td>{name}</td>
+                    <td>{email}</td>
+                    <td>{place}</td>
+                    <td>{mobile}</td>
+                    <td>{batting}</td>
+                    <td>{bowling}</td>
+                    <td>{keeping}</td>
+                    <td>
+                      <a href={aadhar} target="_blank" rel="noreferrer">
+                        <img
+                          src={aadhar}
+                          width="50%"
+                          height="100vh"
+                          alt="id proof"
+                        />
+                      </a>
+                    </td>
+                    <td>
+                      <a href={photo} target="_blank" rel="noreferrer">
+                        <img
+                          src={photo}
+                          width="50%"
+                          height="100vh"
+                          alt="dp proof"
+                          onClick={(e) => window.redire}
+                        />
+                      </a>
+                    </td>
+                    <td>
+                      <a href={payment} target="_blank" rel="noreferrer">
+                        <img
+                          src={payment}
+                          width="50%"
+                          height="100vh"
+                          alt="payment proof"
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                </>
+              );
+            },
+          }}
+        />
+      ) : (
+        <SignIn />
+      )}
     </Box>
   );
 }

@@ -19,6 +19,7 @@ import { db } from "../../firebase-config";
 import { ref, uploadBytes, getDownloadURL, getStorage } from "firebase/storage";
 import { v4 } from "uuid";
 import PopUp from "../../utils/PopUp";
+import { useNavigate } from "react-router-dom";
 
 export default function RegisterForm() {
   const [registerData, setRegisterData] = useState({
@@ -35,10 +36,12 @@ export default function RegisterForm() {
   });
   const playersCollectionRef = collection(db, "players");
   const [isLoading, setIsLoading] = useState(false);
+  const redirect = useNavigate();
   //   Pop up variables
   const [open, setOpen] = useState(false);
   const handleClose = () => {
     setOpen(false);
+    redirect("/");
   };
   // end of pop up variable
 
@@ -72,6 +75,7 @@ export default function RegisterForm() {
           photo: null,
         });
         document.getElementById("player-form").reset();
+        // redirect("/");
       })
       .catch((error) => alert("An error occured "));
   };
