@@ -4,73 +4,88 @@ import MUIDataTable from "mui-datatables";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import SignIn from "../SignIn/Signin";
+import styles from "./AdminConsole.module.scss";
 
 const columns = [
   {
     name: "name",
     label: "Player Name",
-    width: 150,
+    // width: 150,
     editable: false,
   },
   {
     name: "email",
     label: "Email ID",
-    width: 150,
+    // width: 150,
     editable: false,
   },
   {
     name: "place",
     label: "Place",
-    width: 100,
+    // width: 100,
     editable: false,
   },
   {
     name: "mobile",
     label: "Mobile",
     type: "number",
-    width: 110,
+    // width: 110,
     editable: false,
   },
   {
     name: "batting",
     label: "Batting",
     type: "string",
-    width: 110,
+    // width: 110,
     editable: false,
   },
   {
     name: "bowling",
     label: "Bowling",
     type: "string",
-    width: 110,
+    // width: 110,
+    editable: false,
+  },
+  {
+    name: "allRounder",
+    label: "All Rounder",
+    type: "string",
+    // width: 110,
     editable: false,
   },
   {
     name: "wicketKeeper",
     label: "Keeper",
     type: "string",
-    width: 110,
+    // width: 110,
+    editable: false,
+  },
+  {
+    name: "cricheroesLink",
+    label: "Cricheroes",
+    type: "string",
+    // width: 110,
     editable: false,
   },
   {
     name: "aadharCard",
     label: "Aadhar",
     type: "string",
-    width: 110,
+    // width: 110,
     editable: false,
   },
   {
     name: "photo",
     label: "Photo",
     type: "string",
-    width: 110,
+    // width: 110,
     editable: false,
   },
   {
     name: "paymentSS",
     label: "Payment",
     type: "string",
-    width: 110,
+    // width: 110,
     editable: false,
   },
 ];
@@ -90,8 +105,9 @@ export default function AdminConsole() {
   React.useEffect(() => {
     setIsAuthUser(sessionStorage.getItem("isLoggedIn"));
   }, []);
+  console.log("players ", players);
   return (
-    <Box>
+    <Box className={styles["dataGridContainer"]}>
       {isAuthUser ? (
         <MUIDataTable
           title={"Registered players information"}
@@ -113,21 +129,31 @@ export default function AdminConsole() {
                 mobile,
                 batting,
                 bowling,
+                allRounder,
                 keeping,
+                cricheroesLink,
                 aadhar,
                 photo,
                 payment,
               ] = data;
               return (
                 <>
-                  <tr style={{ textAlign: "center" }}>
+                  {/*  */}
+                  <tr>
                     <td>{name}</td>
                     <td>{email}</td>
                     <td>{place}</td>
                     <td>{mobile}</td>
+
                     <td>{batting}</td>
                     <td>{bowling}</td>
+                    <td>{allRounder}</td>
                     <td>{keeping}</td>
+                    <td>
+                      <a href={cricheroesLink} target="_blank" rel="noreferrer">
+                        {cricheroesLink ? "Cricheroes" : "NA"}
+                      </a>
+                    </td>
                     <td>
                       <a href={aadhar} target="_blank" rel="noreferrer">
                         <img

@@ -7,8 +7,6 @@ import Footer from "./globalComponents/Footer/Footer";
 import Gallery from "./pages/Gallery";
 import Registration from "./pages/Registration";
 import Admin from "./pages/Admin";
-// import { Button } from "@mui/material";
-// import NavigationIcon from "@mui/icons-material/Navigation";
 
 const theme = createTheme({
   // Override or create new styles, colors, palettes...
@@ -122,18 +120,6 @@ function App() {
         <footer>
           <Footer />
         </footer>
-        {/* <Button
-          style={{
-            position: "fixed",
-            right: "20px",
-            bottom: "20px",
-            border: "1px solid red",
-            borderRadius: "50%",
-          }}
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          <NavigationIcon fontSize="large" color="#FFF" />
-        </Button> */}
       </BrowserRouter>
     </ThemeProvider>
   );

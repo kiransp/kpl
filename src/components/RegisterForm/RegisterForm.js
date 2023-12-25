@@ -26,10 +26,12 @@ export default function RegisterForm() {
     name: "",
     email: "",
     mobile: "",
+    cricheroesLink: "",
     place: "",
-    batting: "",
-    bowling: "",
-    wicketKeeper: "",
+    batting: "NA",
+    bowling: "NA",
+    allRounder: "No",
+    wicketKeeper: "NA",
     aadharCard: null,
     photo: null,
     paymentSS: null,
@@ -49,12 +51,12 @@ export default function RegisterForm() {
   const storage = getStorage();
   // end of upload variables
 
-  const createPlayer = async () => {
+  const createPlayer = async (updatedPlayerInfo) => {
     setIsLoading(true);
     const [aadharLink, photoLink, paymentSSLink] = await uploadImages();
-
+    console.log("registerData in create updatedPlayerInfo ", updatedPlayerInfo);
     await addDoc(playersCollectionRef, {
-      ...registerData,
+      ...updatedPlayerInfo,
       aadharCard: aadharLink,
       photo: photoLink,
       paymentSS: paymentSSLink,
@@ -73,17 +75,26 @@ export default function RegisterForm() {
           wicketKeeper: "",
           aadharCard: null,
           photo: null,
+          allRounder: "",
+          cricheroesLink: "",
         });
         document.getElementById("player-form").reset();
-        // redirect("/");
       })
       .catch((error) => alert("An error occured "));
   };
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("Here in submit ", registerData);
-    createPlayer();
+    const updatedPlayerInfo = { ...registerData };
+    if (
+      updatedPlayerInfo.batting !== "NA" &&
+      updatedPlayerInfo.bowling !== "NA"
+    ) {
+      updatedPlayerInfo["allRounder"] = "YES";
+      setRegisterData(updatedPlayerInfo);
+    }
+    console.log("Here in submit ", updatedPlayerInfo);
+    createPlayer(updatedPlayerInfo);
   }
 
   async function uploadImage(image) {
@@ -195,8 +206,24 @@ export default function RegisterForm() {
                   }
                 />
               </Grid>
+              <Grid item md={12} xs={12}>
+                <TextField
+                  className={styles["reg-field"]}
+                  id="outlined-basic"
+                  label="Cricheroes Link"
+                  variant="outlined"
+                  required={true}
+                  value={registerData.cricheroesLink}
+                  onChange={(e) =>
+                    setRegisterData({
+                      ...registerData,
+                      cricheroesLink: e.target.value,
+                    })
+                  }
+                />
+              </Grid>
               <Grid item md={5} xs={12}>
-                <FormControl required={true}>
+                <FormControl>
                   <FormLabel
                     id="demo-radio-buttons-group-label"
                     className={styles["reg-field"]}
@@ -212,7 +239,6 @@ export default function RegisterForm() {
                       value="Right"
                       control={
                         <Radio
-                          required={true}
                           checked={registerData.batting === "Right"}
                           onChange={(e) =>
                             setRegisterData({
@@ -227,7 +253,6 @@ export default function RegisterForm() {
                     <FormControlLabel
                       control={
                         <Radio
-                          required={true}
                           checked={registerData.batting === "Left"}
                           onChange={(e) =>
                             setRegisterData({
@@ -245,7 +270,7 @@ export default function RegisterForm() {
               </Grid>
               <Grid item md={1} xs={12}></Grid>
               <Grid item md={5} xs={12}>
-                <FormControl required={true}>
+                <FormControl>
                   <FormLabel
                     id="demo-radio-buttons-group-label"
                     className={styles["reg-field"]}
@@ -260,7 +285,6 @@ export default function RegisterForm() {
                       value="Right"
                       control={
                         <Radio
-                          required={true}
                           checked={registerData.bowling === "Right"}
                           onChange={(e) =>
                             setRegisterData({
@@ -275,7 +299,6 @@ export default function RegisterForm() {
                     <FormControlLabel
                       control={
                         <Radio
-                          required={true}
                           checked={registerData.bowling === "Left"}
                           onChange={(e) =>
                             setRegisterData({
@@ -292,7 +315,7 @@ export default function RegisterForm() {
                 </FormControl>
               </Grid>
               <Grid item md={5} xs={12}>
-                <FormControl required={true}>
+                <FormControl>
                   <FormLabel
                     id="demo-radio-buttons-group-label"
                     className={styles["reg-field"]}
@@ -307,7 +330,6 @@ export default function RegisterForm() {
                       value="Yes"
                       control={
                         <Radio
-                          required={true}
                           checked={registerData.wicketKeeper === "Yes"}
                           onChange={(e) =>
                             setRegisterData({
@@ -322,7 +344,6 @@ export default function RegisterForm() {
                     <FormControlLabel
                       control={
                         <Radio
-                          required={true}
                           checked={registerData.wicketKeeper === "No"}
                           onChange={(e) =>
                             setRegisterData({
@@ -338,6 +359,7 @@ export default function RegisterForm() {
                   </RadioGroup>
                 </FormControl>
                 <Grid item md={7} xs={12}></Grid>
+
                 <Grid item md={12} xs={12}>
                   <FormControl sx={{ width: "100%" }}>
                     <InputLabel>Upload your Aadhar Card*</InputLabel>
