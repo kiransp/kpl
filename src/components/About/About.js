@@ -12,7 +12,7 @@ const About = () => {
       sx={{ p: { xs: "10%", sm: "5%" } }}
       id="About"
     >
-      <Grid item md={6} xs={12}>
+      <Grid item md={6} xs={12} sx={{ display: "flex", alignItems: "center" }}>
         <img
           src={mobile ? abtBannerMobile : abtBannerDesktop}
           alt="about banner"
