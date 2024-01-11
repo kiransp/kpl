@@ -9,9 +9,9 @@ export const abtBannerDesktop =
 export const abtBannerMobile =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/about_banner_sp.png?alt=media&token=2e7431ba-ddb9-4c8e-906c-816ec4c787ec";
 export const innerBannerDT =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/banners%2Finner_banners_1920.png?alt=media&token=4710e4b7-b058-4770-8e45-e963ff27b936";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/phase1LiveBanners%2Finner_banners_1920.png?alt=media&token=28e40286-b1b2-41b5-b001-60b570e8bbc5";
 export const inerBannerMB =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/banners%2Finner_banner_375.png?alt=media&token=c5807e26-6635-43df-809b-a152c121c03e";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/phase1LiveBanners%2Finner_banner_375.png?alt=media&token=f18db51e-28c0-4afb-9190-076bd7e5aa8e";
 export const hg_placeholder =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/gallery_po.png?alt=media&token=1ee1b9d8-059d-4f6c-8cee-f1a8d5e7f792";
 export const video_thumbnail =
