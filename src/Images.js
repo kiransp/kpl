@@ -32,6 +32,8 @@ export const cupDT =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/new%2Fcup_dt.png?alt=media&token=3823849c-9de5-45a9-8b51-cecffdb9085e";
 export const cupSP =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/new%2Fcup_sp.png?alt=media&token=cee8729b-b031-43bc-8aa1-9bff67878766";
+export const phonePeQr =
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/phase1LiveBanners%2Fpp.jpeg?alt=media&token=165cb7ec-1f54-426d-bfdd-8035752155d8";
 export const galleryImages = [
   {
     src: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/old_kpl.jpeg?alt=media&token=cbc08a01-5b14-4d97-82f2-60a5dabf8a0f",

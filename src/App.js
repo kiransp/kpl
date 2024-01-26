@@ -53,6 +53,7 @@ const theme = createTheme({
     },
     body1: {
       fontSize: "16px",
+      fontFamily: "Montserrat",
       // lineHeight: "64px",
       "@media (max-width:600px)": {
         // for mobile screens
