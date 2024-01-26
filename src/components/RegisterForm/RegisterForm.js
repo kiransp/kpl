@@ -20,6 +20,7 @@ import { ref, uploadBytes, getDownloadURL, getStorage } from "firebase/storage";
 import { v4 } from "uuid";
 import PopUp from "../../utils/PopUp";
 import { useNavigate } from "react-router-dom";
+import { phonePeQr } from "../../Images";
 
 export default function RegisterForm() {
   const [registerData, setRegisterData] = useState({
@@ -417,22 +418,59 @@ export default function RegisterForm() {
                     />
                   </FormControl>
                 </Grid>
-                <Grid item md={4} xs={12}>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    className={styles["reg-field"]}
-                    sx={{
-                      backgroundColor: "#001585",
-                      fontWeight: "600",
-                      "&:hover": {
-                        backgroundColor: "#CC0000",
-                      },
-                    }}
+              </Grid>
+              <Grid item md={1} xs={12}></Grid>
+              <Grid
+                item
+                md={6}
+                xs={12}
+                sx={{
+                  border: "1px solid #666666",
+                  textAlign: "center",
+                  mt: { xs: "20px" },
+                }}
+              >
+                <Typography variant="h6" className={styles["reg-title"]}>
+                  Steps to follow
+                </Typography>
+
+                <ol style={{ textAlign: "left" }}>
+                  <li>
+                    Scan the QR code below and make a payment of <b>200 Rs.</b>
+                  </li>
+                  <li>Submit a screenshot as confirmation.</li>
+                </ol>
+                <img src={phonePeQr} alt="QR code to make payment" />
+                <Typography variant="subtitle2">9986223746@ybl</Typography>
+              </Grid>
+              <Grid item md={12} xs={12} sx={{ mt: "20px" }}>
+                <Typography variant="body1">
+                  By clicking on Register button below., I agree to the{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/phase2_docs%2FKPL_T%26C.pdf?alt=media&token=07d1e82d-6524-4df3-9013-10483e64b1ac"
                   >
-                    REGISTER
-                  </Button>
-                </Grid>
+                    Terms and Conditions
+                  </a>{" "}
+                  of KPL.
+                </Typography>
+              </Grid>
+              <Grid item md={4} xs={12}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  className={styles["reg-field"]}
+                  sx={{
+                    backgroundColor: "#001585",
+                    fontWeight: "600",
+                    "&:hover": {
+                      backgroundColor: "#CC0000",
+                    },
+                  }}
+                >
+                  REGISTER
+                </Button>
               </Grid>
             </Grid>
           </form>
