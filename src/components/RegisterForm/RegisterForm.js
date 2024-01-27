@@ -441,7 +441,7 @@ export default function RegisterForm() {
                   <li>Submit a screenshot as confirmation.</li>
                 </ol>
                 <img src={phonePeQr} alt="QR code to make payment" />
-                <Typography variant="subtitle2">9986223746@ybl</Typography>
+                <Typography variant="subtitle2">7349650442@axl</Typography>
               </Grid>
               <Grid item md={12} xs={12} sx={{ mt: "20px" }}>
                 <Typography variant="body1">
