@@ -213,7 +213,7 @@ export default function RegisterForm() {
                   id="outlined-basic"
                   label="Cricheroes Link"
                   variant="outlined"
-                  required={true}
+                  // required={true}
                   value={registerData.cricheroesLink}
                   onChange={(e) =>
                     setRegisterData({
