@@ -1,7 +1,7 @@
 export const kplLogo =
   "https://firebasestorage.googleapis.com/v0/b/whatsapp-61c82.appspot.com/o/kpl_logo_cropped.png?alt=media&token=d15be49f-9bec-4861-88ff-9f6528be974b";
 export const bannerImage =
-  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/phase1LiveBanners%2Fdt_plain.png?alt=media&token=a1e8e59f-ae90-4c41-814f-5b4b7c84fde8";
+  "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/phase1LiveBanners%2Fdt_plain-min.png?alt=media&token=73eccd2c-b09b-4392-8a0a-e340d6ae8d58";
 export const bannerImageMobile =
   "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/phase1LiveBanners%2Fsp_plain.png?alt=media&token=8916ba54-1037-44c4-a1de-86e4e5c4e30a";
 export const abtBannerDesktop =
