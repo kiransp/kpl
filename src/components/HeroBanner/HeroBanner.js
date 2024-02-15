@@ -1,8 +1,8 @@
 import { Grid, useMediaQuery, useTheme } from "@mui/material";
 import styles from "./HeroBanner.module.scss";
 import { bannerImage, bannerImageMobile } from "../../Images";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { NavHashLink } from "react-router-hash-link";
+// import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+// import { NavHashLink } from "react-router-hash-link";
 
 const HeroBanner = () => {
   const theme = useTheme();
@@ -23,7 +23,7 @@ const HeroBanner = () => {
         position: "relative",
       }}
     >
-      <NavHashLink
+      {/* <NavHashLink
         to="/register"
         className={styles["dislodged-border"]}
         style={{
@@ -36,7 +36,7 @@ const HeroBanner = () => {
         <span style={{ display: "flex", alignItems: "center" }}>
           REGISTER NOW <ArrowRightAltIcon fontSize="large" />
         </span>
-      </NavHashLink>
+      </NavHashLink> */}
 
       {/* </Button> */}
       {/* {mobile ? (
