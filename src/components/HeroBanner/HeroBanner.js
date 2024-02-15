@@ -3,6 +3,7 @@ import styles from "./HeroBanner.module.scss";
 import { bannerImage, bannerImageMobile } from "../../Images";
 // import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 // import { NavHashLink } from "react-router-hash-link";
+// delete
 
 const HeroBanner = () => {
   const theme = useTheme();
