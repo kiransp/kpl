@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 // import Tournaments from "./pages/Tournaments";
 import Footer from "./globalComponents/Footer/Footer";
 import Gallery from "./pages/Gallery";
-import Registration from "./pages/Registration";
+// import Registration from "./pages/Registration";
 import Admin from "./pages/Admin";
 
 const theme = createTheme({
@@ -101,14 +101,14 @@ function App() {
               </>
             }
           />
-          <Route
+          {/* <Route
             path="/register"
             element={
               <>
                 <Registration />
               </>
             }
-          />
+          /> */}
           <Route
             path="/admin"
             element={
