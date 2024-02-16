@@ -81,13 +81,13 @@ const columns = [
     // width: 110,
     editable: false,
   },
-  {
-    name: "paymentSS",
-    label: "Payment",
-    type: "string",
-    // width: 110,
-    editable: false,
-  },
+  // {
+  //   name: "paymentSS",
+  //   label: "Payment",
+  //   type: "string",
+  //   // width: 110,
+  //   editable: false,
+  // },
 ];
 
 export default function AdminConsole() {
@@ -134,7 +134,7 @@ export default function AdminConsole() {
                 cricheroesLink,
                 aadhar,
                 photo,
-                payment,
+                ,
               ] = data;
               return (
                 <>
@@ -175,7 +175,7 @@ export default function AdminConsole() {
                         />
                       </a>
                     </td>
-                    <td>
+                    {/* <td>
                       <a href={payment} target="_blank" rel="noreferrer">
                         <img
                           src={payment}
@@ -184,7 +184,7 @@ export default function AdminConsole() {
                           alt="payment proof"
                         />
                       </a>
-                    </td>
+                    </td> */}
                   </tr>
                 </>
               );
