@@ -21,8 +21,8 @@ const TeamsCarousel = () => {
           autoplay={true}
           cellAlign={"center"}
           // cellSpacing={30}
-          renderCenterLeftControls={({ previousSlide }) => null}
-          renderCenterRightControls={({ nextSlide }) => null}
+          // renderCenterLeftControls={({ previousSlide }) => null}
+          // renderCenterRightControls={({ nextSlide }) => null}
         >
           {teamLogos.map(({ logo, name }) => (
             <Link to={`/teamdetails/${name}`}>
