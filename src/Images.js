@@ -108,3 +108,47 @@ export const galleryImages = [
     alt: "",
   },
 ];
+export const teamLogos = [
+  {
+    logo: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/team_logos%2Fdhoni.png?alt=media&token=b5ea10ce-e9bc-4929-bbaa-5f9e6c4aa64c",
+    name: "dhoni",
+    owner:
+      "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Fdhoni.jpg?alt=media&token=9255dcb6-9939-4405-a787-3200d0f2016f",
+  },
+  {
+    logo: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/team_logos%2Fmubarak.png?alt=media&token=efa639d7-359e-48d5-9557-09dd609e8cc4",
+    name: "mubarak",
+    owner:
+      "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Fmubarak.jpg?alt=media&token=22605bc0-8277-415c-b490-f992bddf4886",
+  },
+  {
+    logo: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/team_logos%2Fprathik.png?alt=media&token=eaddd921-d8bc-4dc1-9ed4-1cdb0188cd9e",
+    name: "prathik",
+    owner:
+      "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Fprathik.jpg?alt=media&token=7d81edf5-3730-4b51-82f3-e8d3a6262657",
+  },
+  {
+    logo: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/team_logos%2Frc.png?alt=media&token=8ced74c9-758c-493b-80e5-d049acc20221",
+    name: "rc",
+    owner:
+      "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Frc.jpg?alt=media&token=3e581350-5cd3-4d7b-b471-c764526fd4b4",
+  },
+  {
+    logo: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/team_logos%2Fsachin.png?alt=media&token=5f52d656-9a13-4c3f-9d52-92761a9daeb9",
+    name: "sachin",
+    owner:
+      "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Fsachin.jpg?alt=media&token=c6853725-2015-4d9e-9479-c748dd84461c",
+  },
+  {
+    logo: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/team_logos%2Fsailions.png?alt=media&token=2985205f-86e2-4f3e-aaa8-b1d70379fb10",
+    name: "sailions",
+    owner:
+      "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Fsailions.jpg?alt=media&token=8d1c6d4b-edc0-4732-b336-5bb4050549a8",
+  },
+  {
+    logo: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/team_logos%2Fspartans.png?alt=media&token=f2a504e6-7a50-47a4-a65b-1522c6bf1013",
+    name: "spartans",
+    owner:
+      "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Fspartans.jpg?alt=media&token=850aa0f1-b8b6-4f05-b97f-fff6b2f9e196",
+  },
+];
