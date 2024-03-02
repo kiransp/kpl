@@ -1,0 +1,17 @@
+$text-color: #fff;
+
+.hg-title {
+  color: $text-color;
+  font-size: 28px;
+}
+.hg-heading {
+  color: $text-color;
+  overflow-wrap: break-word;
+  font-family: "Montserrat";
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+.hg-images {
+  text-align: center;
+  // padding: 20px;
+}

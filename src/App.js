@@ -7,7 +7,7 @@ import Footer from "./globalComponents/Footer/Footer";
 import Gallery from "./pages/Gallery";
 // import Registration from "./pages/Registration";
 import Admin from "./pages/Admin";
-import TeamDetails from "./pages/TeamDetails";
+import TeamDetails from "./pages/TeamDetails/TeamDetails";
 
 const theme = createTheme({
   // Override or create new styles, colors, palettes...
