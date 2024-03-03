@@ -111,7 +111,7 @@ export const galleryImages = [
 export const teamLogos = [
   {
     logo: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/team_logos%2Fdhoni.png?alt=media&token=b5ea10ce-e9bc-4929-bbaa-5f9e6c4aa64c",
-    name: "dhoni",
+    name: "ms_dhoni",
     owner:
       "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Fdhoni.jpg?alt=media&token=9255dcb6-9939-4405-a787-3200d0f2016f",
   },
@@ -148,6 +148,12 @@ export const teamLogos = [
   {
     logo: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/team_logos%2Fspartans.png?alt=media&token=f2a504e6-7a50-47a4-a65b-1522c6bf1013",
     name: "spartans",
+    owner:
+      "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Fspartans.jpg?alt=media&token=850aa0f1-b8b6-4f05-b97f-fff6b2f9e196",
+  },
+  {
+    logo: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/team_logos%2Fjai.png?alt=media&token=c37bf50a-ac77-4da8-91ee-85a13fd9fdf6",
+    name: "jaibheem",
     owner:
       "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Fspartans.jpg?alt=media&token=850aa0f1-b8b6-4f05-b97f-fff6b2f9e196",
   },

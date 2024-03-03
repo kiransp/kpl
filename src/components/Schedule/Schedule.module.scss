@@ -1,0 +1,29 @@
+.match-vs {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 800 !important;
+  color: #e42722;
+  margin: 0 50px !important;
+}
+
+.match-title {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 800 !important;
+  color: #e42722;
+}
+
+.card-image {
+  width: 30% !important;
+}
+
+/* Rectangle 11 */
+
+.match-time {
+  background: linear-gradient(
+    90.68deg,
+    #0007ab -3.84%,
+    #00b7ff 103.5%,
+    #0007ab 103.52%
+  );
+  display: flex;
+  justify-content: space-around;
+}
