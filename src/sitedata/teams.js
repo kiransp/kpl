@@ -270,19 +270,19 @@ const teams = {
       name: "Yogesh",
     },
     {
-      name: "",
+      name: "Ashok Chakri",
     },
     {
-      name: "",
+      name: "Prathap",
     },
     {
-      name: "",
+      name: "Vishwa",
     },
     {
-      name: "",
+      name: "Altaf",
     },
     {
-      name: "",
+      name: "vasanth",
     },
     {
       name: "",

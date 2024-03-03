@@ -56,7 +56,7 @@ const Schedule = () => {
                       component="img"
                       alt={"name"}
                       height="200"
-                      image={logoBaseUrl + team1 + ".png?alt=media"}
+                      image={logoBaseUrl + team1 + "s.png?alt=media"}
                       sx={{
                         objectFit: "contain",
                       }}
@@ -69,7 +69,7 @@ const Schedule = () => {
                       component="img"
                       alt={"name"}
                       height="200"
-                      image={logoBaseUrl + team2 + ".png?alt=media"}
+                      image={logoBaseUrl + team2 + "s.png?alt=media"}
                       sx={{
                         objectFit: "contain",
                       }}
