@@ -2,7 +2,13 @@
   font-family: Montserrat, sans-serif !important;
   font-weight: 800 !important;
   color: #e42722;
-  margin: 0 50px !important;
+  // margin: 0 50px !important;
+}
+
+.dummy-team {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 600 !important;
+  color: #000;
 }
 
 .match-title {
@@ -26,6 +32,8 @@
   );
   display: flex;
   justify-content: space-around;
+  align-items: center !important;
+  padding: 10px !important;
 }
 
 .view-all-btn {
@@ -37,4 +45,8 @@
   text-transform: none !important;
   margin-top: 30px !important;
   color: #000 !important;
+}
+
+.match-info {
+  margin: 0 !important;
 }
