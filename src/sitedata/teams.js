@@ -285,10 +285,10 @@ const teams = {
       name: "vasanth",
     },
     {
-      name: "",
+      name: "Varun kumar",
     },
     {
-      name: "",
+      name: "Wajid",
     },
   ],
   jaibheem: [
@@ -340,28 +340,28 @@ const teams = {
   ],
   prathik: [
     {
-      name: "",
+      name: "Dhanu",
     },
     {
-      name: "",
+      name: "Ganesh",
     },
     {
-      name: "",
+      name: "ramesh",
     },
     {
-      name: "",
+      name: "Mohamad Jack",
     },
     {
-      name: "",
+      name: "Anand Mukri",
     },
     {
-      name: "",
+      name: "laxman",
     },
     {
-      name: "",
+      name: "shabuddin",
     },
     {
-      name: "",
+      name: "Vijay",
     },
     {
       name: "",
