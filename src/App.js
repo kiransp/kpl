@@ -9,6 +9,7 @@ import Gallery from "./pages/Gallery";
 import Admin from "./pages/Admin";
 import TeamDetails from "./pages/TeamDetails/TeamDetails";
 import AllTeams from "./pages/AllTeams/AllTeams";
+import Schedule from "./components/Schedule/Schedule";
 
 const theme = createTheme({
   // Override or create new styles, colors, palettes...
@@ -124,6 +125,14 @@ function App() {
             element={
               <>
                 <AllTeams />
+              </>
+            }
+          />
+          <Route
+            path="/allmatches"
+            element={
+              <>
+                <Schedule />
               </>
             }
           />
