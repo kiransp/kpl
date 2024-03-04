@@ -188,7 +188,7 @@ const teams = {
       name: "Shivnarayan",
     },
     {
-      name: "",
+      name: "Kiran Taralekar",
     },
     {
       name: "",
@@ -293,49 +293,49 @@ const teams = {
   ],
   jaibheem: [
     {
-      name: "",
+      name: "Narendra",
     },
     {
-      name: "",
+      name: "Dasharat",
     },
     {
-      name: "",
+      name: "Mithun",
     },
     {
-      name: "",
+      name: "Tousif",
     },
     {
-      name: "",
+      name: "Ibrahim",
     },
     {
-      name: "",
+      name: "Shafiq",
     },
     {
-      name: "",
+      name: "matin",
     },
     {
-      name: "",
+      name: "saddam",
     },
     {
-      name: "",
+      name: "Sameer",
     },
     {
-      name: "",
+      name: "Shreyas",
     },
     {
-      name: "",
+      name: "Rabbani",
     },
     {
-      name: "",
+      name: "Abishek",
     },
     {
-      name: "",
+      name: "Akshay",
     },
     {
-      name: "",
+      name: "Raju",
     },
     {
-      name: "",
+      name: "Abdul",
     },
   ],
   prathik: [
@@ -364,22 +364,22 @@ const teams = {
       name: "Vijay",
     },
     {
-      name: "",
+      name: "Nawaz",
     },
     {
-      name: "",
+      name: "Sanju power",
     },
     {
-      name: "",
+      name: "izar",
     },
     {
-      name: "",
+      name: "Manappa",
     },
     {
-      name: "",
+      name: "Rang swamy",
     },
     {
-      name: "",
+      name: "shan",
     },
     {
       name: "",

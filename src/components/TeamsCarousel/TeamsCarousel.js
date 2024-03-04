@@ -17,6 +17,7 @@ const TeamsCarousel = () => {
     <Grid
       container
       sx={{ p: { xs: "10%", sm: "5%" }, backgroundColor: "#000" }}
+      id="Teams"
     >
       <Grid item sm={12} xs={12}>
         <Typography

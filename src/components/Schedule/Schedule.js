@@ -22,12 +22,12 @@ const Schedule = () => {
   const logoBaseUrl =
     "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/team_logos%2F";
   const daysMapping = {
-    Day1: "6th March 2024",
-    Day2: "6th March 2024",
-    Day3: "6th March 2024",
-    Day4: "6th March 2024",
-    Semifinals: "Semi Finals - 6th March 2024",
-    Finals: "Finals - 6th March 2024",
+    Day1: "7th March 2024",
+    Day2: "8th March 2024",
+    Day3: "9th March 2024",
+    Day4: "10th March 2024",
+    Semifinals: "Semi Finals - 10th March 2024",
+    Finals: "Finals - 10th March 2024",
   };
   const [isShowALl, setIsShowAll] = useState(false);
 
@@ -42,8 +42,21 @@ const Schedule = () => {
 
   let first2Matches = { ...matches };
   delete first2Matches["Day2"];
+  delete first2Matches["Day3"];
+  delete first2Matches["Day4"];
+  delete first2Matches["Finals"];
+  delete first2Matches["Semifinals"];
   first2Matches["Day1"] = first2Matches["Day1"].slice(0, 2);
   const matchesToRender = isShowALl ? { ...matches } : { ...first2Matches };
+
+  function dayCalcuator(index) {
+    if (index < 4) {
+      return `Day ${index + 1}`;
+    } else {
+      return `Day 4`;
+    }
+  }
+
   return (
     <>
       {isShowALl && <InnerBanner />}
@@ -78,7 +91,7 @@ const Schedule = () => {
                       marginTop: m_index > 0 ? "30px" : 0,
                     }}
                   >
-                    {`Day ${m_index + 1} - ${daysMapping[match]}`}
+                    {`${dayCalcuator(m_index)} - ${daysMapping[match]}`}
                   </Typography>
                 </Grid>
               )}
