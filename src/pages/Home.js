@@ -5,6 +5,7 @@ import HeroBanner from "../components/HeroBanner/HeroBanner";
 import Prize from "../components/Prize/Prize";
 import Story from "../components/Story/Story";
 import TeamsCarousel from "../components/TeamsCarousel/TeamsCarousel";
+import Schedule from "../components/Schedule/Schedule";
 
 const Home = () => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const Home = () => {
       <About />
       <Prize />
       <TeamsCarousel />
+      <Schedule />
       <HomeGallery />
       <Story />
     </>

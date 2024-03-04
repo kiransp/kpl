@@ -25,7 +25,7 @@ const Prize = () => {
             Runner Up
           </Typography>
           <Typography variant="h1" className={styles["prize-value"]}>
-            3,33,000/-
+            3,50,000/-
           </Typography>
         </div>
       </Grid>

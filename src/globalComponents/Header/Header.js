@@ -16,7 +16,7 @@ import styles from "./Header.module.scss";
 import { NavHashLink } from "react-router-hash-link";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Gallery", "Contact Us"];
+const navItems = ["Home", "About", "Teams", "Gallery", "Contact Us"];
 
 function Header(props) {
   const { window } = props;

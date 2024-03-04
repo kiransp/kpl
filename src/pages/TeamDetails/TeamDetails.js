@@ -5,6 +5,7 @@ import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 import { teams } from "../../sitedata/teams";
 import { teamNames } from "../../sitedata/teamNames";
 import styles from "./TeamDetails.module.scss";
+import _ from "lodash";
 
 const TeamDetails = () => {
   const { teamname } = useParams();
@@ -36,9 +37,9 @@ const TeamDetails = () => {
             {teamNames[teamname]}
           </Typography>
         </Grid>
-        {teams[teamname].map(({ photo, name }) => (
+        {_.sortBy(teams[teamname], ["name"]).map(({ photo, name }) => (
           <Grid item sm={3} xs={12} sx={{ textAlign: "center" }}>
-            <Card sx={{ backgroundColor: "#000", border: "1px solid #969696" }}>
+            <Card sx={{ backgroundColor: "#000" }}>
               <CardMedia
                 component="img"
                 alt={name}
@@ -54,6 +55,7 @@ const TeamDetails = () => {
                   variant="h5"
                   component="div"
                   sx={{ color: "#FFF" }}
+                  className={styles["player-name"]}
                 >
                   {name}
                 </Typography>

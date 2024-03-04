@@ -1,0 +1,52 @@
+.match-vs {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 800 !important;
+  color: #e42722;
+  // margin: 0 50px !important;
+}
+
+.dummy-team {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 600 !important;
+  color: #000;
+}
+
+.match-title {
+  font-family: Montserrat, sans-serif !important;
+  font-weight: 800 !important;
+  color: #e42722;
+}
+
+.card-image {
+  width: 30% !important;
+}
+
+/* Rectangle 11 */
+
+.match-time {
+  background: linear-gradient(
+    90.68deg,
+    #0007ab -3.84%,
+    #00b7ff 103.5%,
+    #0007ab 103.52%
+  );
+  display: flex;
+  justify-content: space-around;
+  align-items: center !important;
+  padding: 10px !important;
+}
+
+.view-all-btn {
+  background-color: #fff !important;
+  border: 1px solid #000 !important;
+  font-family: Montserrat !important;
+  font-weight: 800 !important;
+  border-radius: 0 !important;
+  text-transform: none !important;
+  margin-top: 30px !important;
+  color: #000 !important;
+}
+
+.match-info {
+  margin: 0 !important;
+}
