@@ -89,6 +89,7 @@ const Schedule = () => {
                       fontFamily: "Montserrat",
                       fontWeight: "600",
                       marginTop: m_index > 0 ? "30px" : 0,
+                      color: "#e42722",
                     }}
                   >
                     {`${dayCalcuator(m_index)} - ${daysMapping[match]}`}
