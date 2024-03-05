@@ -43,7 +43,7 @@ const TeamDetails = () => {
               <CardMedia
                 component="img"
                 alt={name}
-                height="200"
+                height="300"
                 image={photo}
                 sx={{
                   objectFit: "contain",

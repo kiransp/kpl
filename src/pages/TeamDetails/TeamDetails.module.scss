@@ -2,13 +2,13 @@ $text-color: #fff;
 
 .hg-title {
   color: $text-color;
-  font-size: 28px;
+  font-size: 30px !important;
 }
 .hg-heading {
   color: $text-color;
   overflow-wrap: break-word;
   font-family: "Montserrat";
-  font-weight: 800;
+  font-weight: 800 !important;
   margin-bottom: 40px;
 }
 .hg-images {
