@@ -97,104 +97,98 @@ const Schedule = () => {
                 </Grid>
               )}
 
-              {matchesToRender[match].map(({ team1, team2, time }, index) => {
-                return (
-                  <Grid item md={6} xs={12}>
-                    {
-                      <Card
-                        sx={{
-                          border: "1px solid #E3E3E3",
-                          borderBottom: "none",
-                        }}
-                      >
-                        <div
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            padding: "40px 0", // remove this for actual
+              {matchesToRender[match].map(
+                ({ team1, team2, time, url1, url2 }, index) => {
+                  return (
+                    <Grid item md={6} xs={12}>
+                      {
+                        <Card
+                          sx={{
+                            border: "1px solid #E3E3E3",
+                            borderBottom: "none",
                           }}
                         >
-                          {/* <CardMedia
-                            className={styles["card-image"]}
-                            component="img"
-                            alt={"name"}
-                            height={mobile ? "100" : "200"}
-                            image={logoBaseUrl + team1 + ".png?alt=media"}
-                            sx={{
-                              objectFit: "contain",
-                            }}
-                          /> */}
-                          <Typography
-                            variant="h3"
-                            className={styles["dummy-team"]}
-                            sx={{ margin: { xs: "0 20px", sm: "0 50px" } }}
-                          >
-                            {team1}
-                          </Typography>
-                          <Typography
-                            variant="h1"
-                            className={styles["match-vs"]}
-                            // sx={{ margin: { xs: "0 20px", sm: "0 50px" } }} use this for actual team
-                            sx={{ margin: { xs: "0", sm: "0 20px" } }} // remove this for actual
-                          >
-                            v/s
-                          </Typography>
-                          <Typography
-                            variant="h3"
-                            className={styles["dummy-team"]}
-                            sx={{ margin: { xs: "0 20px", sm: "0 50px" } }}
-                          >
-                            {team2}
-                          </Typography>
-                          {/* <CardMedia
-                            className={styles["card-image"]}
-                            component="img"
-                            alt={"name"}
-                            height={{ xs: "100px", sm: "200px" }}
-                            image={logoBaseUrl + team2 + ".png?alt=media"}
-                            sx={{
-                              objectFit: "contain",
-                            }} 
-                          />*/}
-                        </div>
-                        <CardContent className={styles["match-time"]}>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="div"
-                            className={styles["match-info"]}
-                            sx={{
-                              color: "#FFF",
-                              marginBottom: 0,
-                              fontSize: {
-                                sm: "20px !important",
-                                xs: "10px !important",
-                              },
+                          <div
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
                             }}
                           >
-                            {time}
-                          </Typography>
-                          <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="div"
-                            sx={{
-                              color: "#FFF",
-                              fontSize: {
-                                sm: "20px !important",
-                                xs: "10px !important",
-                              },
-                            }}
-                          >
-                            {daysMapping[match]}
-                          </Typography>
-                        </CardContent>
-                      </Card>
-                    }
-                  </Grid>
-                );
-              })}
+                            <CardMedia
+                              className={styles["card-image"]}
+                              component="img"
+                              alt={"name"}
+                              height={mobile ? "100" : "200"}
+                              image={
+                                team1
+                                  ? logoBaseUrl + team1 + ".png?alt=media"
+                                  : url1
+                              }
+                              sx={{
+                                objectFit: "contain",
+                              }}
+                            />
+                            <Typography
+                              variant="h1"
+                              className={styles["match-vs"]}
+                              sx={{ margin: { xs: "0 20px", sm: "0 50px" } }}
+                            >
+                              v/s
+                            </Typography>
+                            <CardMedia
+                              className={styles["card-image"]}
+                              component="img"
+                              alt={"name"}
+                              height={{ xs: "100px", sm: "200px" }}
+                              image={
+                                team2
+                                  ? logoBaseUrl + team2 + ".png?alt=media"
+                                  : url2
+                              }
+                              sx={{
+                                objectFit: "contain",
+                              }}
+                            />
+                          </div>
+                          <CardContent className={styles["match-time"]}>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="div"
+                              className={styles["match-info"]}
+                              sx={{
+                                color: "#FFF",
+                                marginBottom: 0,
+                                fontSize: {
+                                  sm: "20px !important",
+                                  xs: "10px !important",
+                                },
+                              }}
+                            >
+                              {time}
+                            </Typography>
+                            <Typography
+                              gutterBottom
+                              variant="h5"
+                              component="div"
+                              sx={{
+                                color: "#FFF",
+                                fontSize: {
+                                  sm: "20px !important",
+                                  xs: "10px !important",
+                                },
+                              }}
+                            >
+                              {daysMapping[match]}
+                            </Typography>
+                          </CardContent>
+                        </Card>
+                      }
+                    </Grid>
+                  );
+                }
+              )}
               {!isShowALl && (
                 <Grid
                   xs={12}
