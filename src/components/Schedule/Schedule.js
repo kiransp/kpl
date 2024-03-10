@@ -14,6 +14,9 @@ import { matches } from "../../sitedata/matches";
 import { useNavigate } from "react-router-dom";
 import InnerBanner from "../InnerBanner/InnerBanner";
 import { useEffect, useState } from "react";
+import Confetti from "react-confetti";
+import ConfettiExplosion from "react-confetti-explosion";
+import useWindowDimensions from "./useWindowDimensions";
 
 const Schedule = () => {
   const navigate = useNavigate();
@@ -61,6 +64,11 @@ const Schedule = () => {
     <>
       {isShowALl && <InnerBanner />}
       <Grid container sx={{ p: { xs: "10%", sm: "5%" } }}>
+        <Confetti
+          width={window.innerWidth}
+          height={window.innerHeight}
+          numberOfPieces={1000}
+        />
         <Grid item md={12} xs={12} sx={{ pl: { xs: 0, sm: "0px" } }}>
           <Typography
             variant="h3"
@@ -69,7 +77,7 @@ const Schedule = () => {
             MATCHES
           </Typography>
           <Typography variant="h1" className={styles["match-title"]}>
-            Upcoming Matches
+            All Matches
           </Typography>
           <Typography
             variant="h3"
@@ -77,7 +85,11 @@ const Schedule = () => {
           >
             At Neharu Ground, Hubballi.
           </Typography>
+          <Typography variant="h2" className={styles["final-title"]}>
+            Congratulations to the winner, Sai Lions
+          </Typography>
         </Grid>
+
         {Object.keys(matchesToRender).map((match, m_index) => {
           return (
             <Grid container spacing={2}>
