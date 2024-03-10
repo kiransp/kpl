@@ -188,6 +188,7 @@ const matches = {
       time: "4:30 PM - 6:00PM",
       team1: "sailions",
       team2: "prathik",
+      winner: "Sai Lions won by 4 wickets",
       // url1: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Ftop2.png?alt=media&token=509fd3b6-4e9d-42d7-8c82-8e1895f5a8d6",
       //url2: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Ftop3.png?alt=media&token=187559c1-8ae1-4f17-9975-b70c3e8e907f",
     },
@@ -195,8 +196,9 @@ const matches = {
   Finals: [
     {
       time: "6:00 PM - 7:30PM",
-      url1: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Fsf1.png?alt=media&token=afd81e81-01ac-4d72-a4f3-f8e18d8f7e24",
-      url2: "https://firebasestorage.googleapis.com/v0/b/kplcricket-d5078.appspot.com/o/teamDetails%2Fsf2.png?alt=media&token=ac303180-fa47-481a-aec7-7a2d31a226c8",
+      team1: "spartans",
+      team2: "sailions",
+      winner: "Sai Lions won by 3 wickets",
     },
   ],
 };
