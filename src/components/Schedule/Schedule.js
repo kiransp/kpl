@@ -98,7 +98,7 @@ const Schedule = () => {
               )}
 
               {matchesToRender[match].map(
-                ({ team1, team2, time, url1, url2 }, index) => {
+                ({ team1, team2, time, url1, url2, winner }, index) => {
                   return (
                     <Grid item md={6} xs={12}>
                       {
@@ -183,6 +183,27 @@ const Schedule = () => {
                               {daysMapping[match]}
                             </Typography>
                           </CardContent>
+                          {winner && (
+                            <CardContent className={styles["match-winner"]}>
+                              <Typography
+                                gutterBottom
+                                variant="h5"
+                                component="div"
+                                className={styles["match-info"]}
+                                sx={{
+                                  color: "#FFF",
+                                  marginBottom: 0,
+                                  fontWeight: "600",
+                                  fontSize: {
+                                    sm: "20px !important",
+                                    xs: "10px !important",
+                                  },
+                                }}
+                              >
+                                {winner}
+                              </Typography>
+                            </CardContent>
+                          )}
                         </Card>
                       }
                     </Grid>
